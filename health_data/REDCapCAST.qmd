@@ -1,0 +1,14 @@
+---
+title: "Package: REDCapCAST"
+date: 2023-05-03
+description: Casting data bases and handling castellated data sets. 
+categories:
+  - REDCap
+  - Package
+  - R
+  - FOSS
+---
+
+## On the shoulders..
+
+This package started as a fork. It is on [GitHub](https://github.com/agdamsbo/REDCapCAST) for now, but I plan on publishing on CRAN.

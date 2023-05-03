@@ -42,6 +42,20 @@
     "text": "Extend of the work"
   },
   {
+    "objectID": "health_data/REDCapCAST.html",
+    "href": "health_data/REDCapCAST.html",
+    "title": "Package: REDCapCAST",
+    "section": "",
+    "text": "This package started as a fork. It is on GitHub for now, but I plan on publishing on CRAN."
+  },
+  {
+    "objectID": "health_data/REDCapCAST.html#on-the-shoulders..",
+    "href": "health_data/REDCapCAST.html#on-the-shoulders..",
+    "title": "Package: REDCapCAST",
+    "section": "",
+    "text": "This package started as a fork. It is on GitHub for now, but I plan on publishing on CRAN."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -81,6 +95,6 @@
     "href": "health-data.html",
     "title": "Health Data projects",
     "section": "",
-    "text": "During my work in clinical research I have aquired a special set of skills in working with data collection, data bases and data analysis. I am very much interested in sharing these skils and knowledge.\nI am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.\nI have work as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don't hesitate to \ncontact me if you need help on a project.\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject: Foot database\n\n\n\nREDCap\n\n\nProject\n\n\nR\n\n\nConsultant\n\n\n\nComprehensive data and data base migration to continue data collection.\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "During my work in clinical research I have aquired a special set of skills in working with data collection, data bases and data analysis. I am very much interested in sharing these skils and knowledge.\nI am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.\nI have work as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don't hesitate to \ncontact me if you need help on a project.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPackage: REDCapCAST\n\n\n\nREDCap\n\n\nPackage\n\n\nR\n\n\nFOSS\n\n\n\nCasting data bases and handling castellated data sets.\n\n\n\n\n\n\nMay 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nProject: Foot database\n\n\n\nREDCap\n\n\nProject\n\n\nR\n\n\nConsultant\n\n\n\nComprehensive data and data base migration to continue data collection.\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
