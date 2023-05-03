@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Andreas"
+  favicon: "/images/favicon.png"
+  site-url: https://andreas.gdamsbo.dk
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: academia.qmd
+        text: Research
+      - href: health-data.qmd
+        text: Other projects
+      # - about.qmd
+    right: 
+      - href: https://git.nikohuru.dk/andreas/web
+        text: Source
+  page-footer: 
+    background: light
+    center: "Made using [Quarto](https://quarto.org/), Copyright 2023, Andreas Gammelgaard Damsbo. Statistics with Umami. Nothing shared with third-parties."
+  # cookie-consent:
+  #   type: express
+  #   style: headline
+  #   palette: light
+  #   prefs-text: "This page uses an extremely minimal tracking tool (Umami) hosted on a private server. No data is shared with any third-party."
+
+format:
+  html:
+    theme: solar
+    # css: styles.css
+    toc: true
+    includes:
+      in_header: header.html
+
+editor: visual
+

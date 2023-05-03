@@ -1,0 +1,15 @@
+---
+title: "Research results"
+listing:
+  contents:
+  - "academia/*.qmd"
+  type: grid
+  sort: "date desc"
+  categories: numbered
+---
+
+::: topbr
+```{=html}
+<p style = "font-size: 18px">Here I will try to write about the research I am involved with. All of this work have been in coorporation with my great collegues and supervisors to whoom I am very gratefull.</p>
+```
+:::

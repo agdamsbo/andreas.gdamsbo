@@ -1,0 +1,32 @@
+---
+title: "Project: Foot database"
+date: 2023-04-28
+description: Comprehensive data and data base migration to continue data collection. 
+categories:
+  - REDCap
+  - Project
+  - R
+  - Consultant
+---
+
+## Background
+
+This project is the most comprehensive data base migration yet.
+
+The client's wish, was for an old Microsoft Access data base to be migrated to REDCap, for continous use and data collection.
+
+## Database
+
+Here are a few characteristics:
+
+-   Around 3000 entries
+
+-   5 collection instruments, 4 of them were to be used as repeatable instruments.
+
+-   80 variables
+
+## Coding
+
+I have collected my scripts in a repository, which will be made public when I have finished the work.
+
+## Extend of the work

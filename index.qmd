@@ -1,0 +1,38 @@
+---
+title: "Andreas Gammelgaard Damsbo"
+about:
+  template: solana
+  image: "/images/portrait.png"
+  links:
+      - href: "mailto:andreas@gdamsbo.dk"
+        icon: "envelope"
+        text: Mail
+      - href: https://github.com/agdamsbo
+        text: GitHub
+        icon: "github"
+      - href: "https://social.gdamsbo.dk/@andreas"
+        icon: "mastodon"
+        text: Mastodon
+      - href: "https://orcid.org/0000-0002-7559-1154"
+        icon: paperclip
+        text: ORCiD
+      - href: "https://git.nikohuru.dk/andreas/cv/raw/branch/main/cv.pdf"
+        icon: "file-earmark-person"
+        text: CV
+---
+
+```{r include=FALSE}
+# Notes
+# 
+# icons: https://icons.getbootstrap.com/
+# 
+# multilanguage: https://quarto-dev.marioangst.com/en/blog/posts/multi-language-quarto/
+#
+# knitr::knit("cv/cv.Rmd",output = "cv/cv.pdf",quiet = TRUE,)
+```
+
+Hi! I am a medical doctor, PhD-student, open source activist and father of two girls.
+
+On this page is my CV, I will write about some hobby projects, and just share what I am concerned with. Some will be in English, some in Danish. Take care!
+
+\[This is still very much a work in progress, but these are my intentions\]

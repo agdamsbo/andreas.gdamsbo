@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Andreas Gammelgaard Damsbo",
+    "section": "",
+    "text": "Hi! I am a medical doctor, PhD-student, open source activist and father of two girls.\nOn this page is my CV, I will write about some hobby projects, and just share what I am concerned with. Some will be in English, some in Danish. Take care!\n[This is still very much a work in progress, but these are my intentions]"
+  },
+  {
+    "objectID": "health_data/ancle.html",
+    "href": "health_data/ancle.html",
+    "title": "Project: Foot database",
+    "section": "",
+    "text": "This project is the most comprehensive data base migration yet.\nThe client’s wish, was for an old Microsoft Access data base to be migrated to REDCap, for continous use and data collection."
+  },
+  {
+    "objectID": "health_data/ancle.html#background",
+    "href": "health_data/ancle.html#background",
+    "title": "Project: Foot database",
+    "section": "",
+    "text": "This project is the most comprehensive data base migration yet.\nThe client’s wish, was for an old Microsoft Access data base to be migrated to REDCap, for continous use and data collection."
+  },
+  {
+    "objectID": "health_data/ancle.html#database",
+    "href": "health_data/ancle.html#database",
+    "title": "Project: Foot database",
+    "section": "Database",
+    "text": "Database\nHere are a few characteristics:\n\nAround 3000 entries\n5 collection instruments, 4 of them were to be used as repeatable instruments.\n80 variables"
+  },
+  {
+    "objectID": "health_data/ancle.html#coding",
+    "href": "health_data/ancle.html#coding",
+    "title": "Project: Foot database",
+    "section": "Coding",
+    "text": "Coding\nI have collected my scripts in a repository, which will be made public when I have finished the work."
+  },
+  {
+    "objectID": "health_data/ancle.html#extend-of-the-work",
+    "href": "health_data/ancle.html#extend-of-the-work",
+    "title": "Project: Foot database",
+    "section": "Extend of the work",
+    "text": "Extend of the work"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Andreas Gammelgaard Damsbo"
+  },
+  {
+    "objectID": "academia.html",
+    "href": "academia.html",
+    "title": "Research results",
+    "section": "",
+    "text": "Here I will try to write about the research I am involved with. All of this work have been in coorporation with my great collegues and supervisors to whoom I am very gratefull.\n\n\n\n\n\n\n\n\n\n\n\n\n\nESOC 2023: Predicting physical activity level after stroke\n\n\n\nConference abstract\n\n\nPhysical activity\n\n\nElastic net\n\n\nR\n\n\n\nA little background to out abstract presented at the ESOC 2023 conference in Munich.\n\n\n\n\n\n\nMay 3, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "health-data.html",
+    "href": "health-data.html",
+    "title": "Health Data projects",
+    "section": "",
+    "text": "During my work in clinical research I have aquired a special set of skills in working with data collection, data bases and data analysis. I am very much interested in sharing these skils and knowledge.\nI am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.\nI have work as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don't hesitate to \ncontact me if you need help on a project.\n\n\n\n\n\n\n\n\n\n\n\n\n\nProject: Foot database\n\n\n\nREDCap\n\n\nProject\n\n\nR\n\n\nConsultant\n\n\n\nComprehensive data and data base migration to continue data collection.\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  }
+]
