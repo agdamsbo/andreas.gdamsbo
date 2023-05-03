@@ -17,10 +17,14 @@ jobs:
 #        uses: actions/checkout@v3
 
       - name: Render Quarto Project
-        uses: quarto-dev/quarto-actions/render@v2
-        with:
-          to: "" # If set, it will be equivalent to `quarto render --to html`
-          path: . # By default, the current working dir is used i.e `quarto render .`
+        runs:
+          using: 'composite'
+          steps: 
+            - name: 'Render'
+              env:
+                QUARTO_PRINT_STACK: true
+              run: quarto render . --to html
+              shell: bash
 
 #      - name: Deploy 🚀
 #        uses: JamesIves/github-pages-deploy-action@v4
