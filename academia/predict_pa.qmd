@@ -9,5 +9,12 @@ categories:
   - R
 ---
 
+## Intro
+
+I am presenting a poster at European Stroke Organisation Conference 2023 on predicting changes in physical activity after stroke.
+
 ## Background
+
+We have been interested in trying to predict patients at incresed risk of physical activity decline after stroke.
+
 
