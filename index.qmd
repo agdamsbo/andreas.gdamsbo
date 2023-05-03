@@ -32,8 +32,6 @@ about:
 # knitr::knit("cv/cv.Rmd",output = "cv/cv.pdf",quiet = TRUE,)
 ```
 
-Hi! I am a medical doctor, PhD-student, open source activist and father of two girls.
+Hi! I am a medical doctor and PhD-student at the Aarhus University Hospital and at \[Aarhus University\](https://pure.au.dk/portal/da/persons/andreas-gammelgaard-damsbo(e3c4afce-3eba-4456-8b8b-2fd90775c87a).html).
 
-On this page is my CV, I will write about some hobby projects, and just share what I am concerned with. Some will be in English, some in Danish. Take care!
-
-\[This is still very much a work in progress, but these are my intentions\]
+This page is my professional website, where I will try to write about the research and other projects I am engaged with through my work. Don't hesitate to contact me if you want to collaborate or want to share your thoughts on some of my work. Take care!
