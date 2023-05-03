@@ -7,3 +7,4 @@ This is the repository for my personal website and blog.
 Have a look at where I found some inspiration:
 
 -   [Richard Hannahs site](https://www.richardshanna.com/)
+-   
