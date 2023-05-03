@@ -20,11 +20,11 @@ website:
         text: Other projects
       # - about.qmd
     right: 
-      - href: https://git.nikohuru.dk/andreas/web
+      - href: https://github.com/agdamsbo/andreas.gdamsbo
         text: Source
   page-footer: 
     background: light
-    center: "Made using [Quarto](https://quarto.org/), Copyright 2023, Andreas Gammelgaard Damsbo. Statistics with Umami. Nothing shared with third-parties."
+    center: "Made using [Quarto](https://quarto.org/), Copyright 2023, Andreas Gammelgaard Damsbo. Statistics with [Umami](https://stats.nikohuru.dk/share/bG56ngAz4o7dVeD1/andreas.gdamsbo) on private server."
   # cookie-consent:
   #   type: express
   #   style: headline
