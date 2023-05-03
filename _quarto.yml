@@ -36,6 +36,7 @@ format:
     theme: solar
     # css: styles.css
     toc: true
+    link-external-newwindow: true
     includes:
       in_header: header.html
 
