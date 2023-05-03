@@ -1,8 +1,4 @@
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/agdamsbo/andreas.gdamsbo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/agdamsbo/andreas.gdamsbo/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
-
-# web
+# andreas.gdamsbo.dk
 
 This is the repository for my personal website and blog.
 
