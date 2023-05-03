@@ -2,6 +2,10 @@ project:
   type: website
   output-dir: docs
 
+resources:
+  - CNAME
+# https://github.com/quarto-dev/quarto-cli/discussions/3249
+
 website:
   title: "Andreas"
   favicon: "/images/favicon.png"
