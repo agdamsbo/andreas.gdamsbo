@@ -32,7 +32,7 @@ about:
 # knitr::knit("cv/cv.Rmd",output = "cv/cv.pdf",quiet = TRUE,)
 ```
 
-Hi! I am a medical doctor and PhD-student at the Aarhus University Hospital and at \[Aarhus University\](https://pure.au.dk/portal/da/persons/andreas-gammelgaard-damsbo(e3c4afce-3eba-4456-8b8b-2fd90775c87a).html).
+Hi! I am a medical doctor and PhD-student at the Aarhus University Hospital and at <a href="[mailto:andreas@gdamsbo.dk](https://pure.au.dk/portal/da/persons/andreas-gammelgaard-damsbo(e3c4afce-3eba-4456-8b8b-2fd90775c87a).html)">Aarhus University</a>.
 
 This page is my professional website, where I will try to write about the research and other projects I am engaged with through my work. Don't hesitate to contact me if you want to collaborate or want to share your thoughts on some of my work.
 
