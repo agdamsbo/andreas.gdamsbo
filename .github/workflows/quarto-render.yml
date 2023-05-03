@@ -1,0 +1,25 @@
+name: Render quarto
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Render Quarto Project
+        env:
+          QUARTO_PRINT_STACK: true
+        run: quarto render . --to html
+        shell: bash
+
+#      - name: Deploy 🚀
+#        uses: JamesIves/github-pages-deploy-action@v4
+#        with:
+#          folder: docs # The folder the action should deploy.
