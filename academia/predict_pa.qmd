@@ -15,6 +15,10 @@ I am presenting a poster at European Stroke Organisation Conference 2023 on pred
 
 ## Background
 
-We have been interested in trying to predict patients at incresed risk of physical activity decline after stroke.
+We have been interested in trying to predict patients at increased risk of physical activity decline after stroke.
 
+::: callout-note
+## Non-published
 
+Please note, that tables and figures presented here are not yet published, certainly not peer-reviewed, and definitely subject to change.
+:::

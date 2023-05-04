@@ -9,10 +9,9 @@ listing:
 ---
 
 ::: topbr
-```{=html}
-<p style = "font-size: 18px">Here I will try to write about the research I am involved with. All of this work have been in coorporation with my great collegues and supervisors to whoom I am very gratefull.</p>
-```
-```{=html}
-<p style = "font-size: 18px">I will also be sharing about work in R.</p>
-```
+Here I will try to write about the research I am involved with. All of this work have been in corporation with my great colleagues and supervisors to who I am very grateful.
+
+I will also be writing about work and projects in R.
 :::
+
+
