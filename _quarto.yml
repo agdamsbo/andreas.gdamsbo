@@ -7,9 +7,14 @@ resources:
 # https://github.com/quarto-dev/quarto-cli/discussions/3249
 
 website:
-  title: "Andreas"
+  title: "Damsbo AG"
   favicon: "/images/favicon.png"
   site-url: https://andreas.gdamsbo.dk
+  repo-url: https://github.com/agdamsbo/andreas.gdamsbo
+  repo-actions: [source, issue]
+  page-navigation: true
+  search:
+    type: overlay
   navbar:
     left:
       - href: index.qmd
@@ -17,28 +22,25 @@ website:
       - href: academia.qmd
         text: Research
       - href: health-data.qmd
-        text: Other projects
+        text: Projects
       # - about.qmd
-    right: 
+    right:
       - href: https://github.com/agdamsbo/andreas.gdamsbo
         text: Source
   page-footer: 
     background: light
-    center: "Made using [Quarto](https://quarto.org/), Copyright 2023, Andreas Gammelgaard Damsbo. Statistics with [Umami](https://stats.nikohuru.dk/share/bG56ngAz4o7dVeD1/andreas.gdamsbo) on private server."
-  # cookie-consent:
-  #   type: express
-  #   style: headline
-  #   palette: light
-  #   prefs-text: "This page uses an extremely minimal tracking tool (Umami) hosted on a private server. No data is shared with any third-party."
+    center: |
+      Made using [Quarto](https://quarto.org/) | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) | Statistics with [Umami](https://stats.nikohuru.dk/share/bG56ngAz4o7dVeD1/andreas.gdamsbo)
 
 format:
   html:
-    theme: solar
+    theme: 
+      light: lumen
+      dark: solar
     # css: styles.css
     toc: true
     link-external-newwindow: true
-    includes:
-      in_header: header.html
+    include-in-header: umami.html
 
 editor: visual
 
