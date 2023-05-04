@@ -8,15 +8,9 @@ listing:
   categories: numbered
 ---
 
-::: topbr
-```{=html}
-<p style = "font-size: 18px">During my work in clinical research I have aquired a special set of skills in working with data collection, data bases and data analysis. I am very much interested in sharing these skils and knowledge.</p>
-```
-```{=html}
-<p style = "font-size: 18px">I am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.</p>
-```
-```{=html}
-<p style = "font-size: 18px">I have work as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don't hesitate to 
-<a href="mailto:andreas@gdamsbo.dk">contact me</a> if you need help on a project.</p>
-```
-:::
+
+During my work in clinical research I have aquired a special set of skills in working with data collection, data bases and data analysis. I am very much interested in sharing these skils and knowledge.
+
+I am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.
+
+I have work as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don't hesitate to <a href="mailto:andreas@gdamsbo.dk">contact me</a> if you need help on a project.

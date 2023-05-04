@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Andreas Gammelgaard Damsbo",
+    "title": "Welcome!",
     "section": "",
-    "text": "Hi! I am a medical doctor and PhD-student at Danish Stroke Centre, Aarhus University Hospital and Aarhus University.\nThis page is my professional website, where I will try to write about the research and other projects I am engaged with through my work. Don’t hesitate to contact me if you want to collaborate or want to share your thoughts on some of my work.\nI also do other things than work, which I might link to.\nTake care!"
+    "text": "Hi! I am Andreas Gammelgaard Damsbo. I am a medical doctor and PhD-student at the Danish Stroke Centre, Aarhus University Hospital and Aarhus University.\nThis page is my professional website, where I will try to write about the research and other projects I am engaged with through my work. Don’t hesitate to contact me if you want to collaborate or want to share your thoughts on some of my work.\nI also do other things than work, which I might link to.\nTake care!"
   },
   {
     "objectID": "health_data/ancle.html",
@@ -95,6 +95,6 @@
     "href": "health-data.html",
     "title": "Health Data projects",
     "section": "",
-    "text": "During my work in clinical research I have aquired a special set of skills in working with data collection, data bases and data analysis. I am very much interested in sharing these skils and knowledge.\nI am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.\nI have work as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don't hesitate to \ncontact me if you need help on a project.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPackage: REDCapCAST\n\n\n\nREDCap\n\n\nPackage\n\n\nR\n\n\nFOSS\n\n\n\nCasting data bases and handling castellated data sets.\n\n\n\n\n\n\nMay 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nProject: Foot database\n\n\n\nREDCap\n\n\nProject\n\n\nR\n\n\nConsultant\n\n\n\nComprehensive data and data base migration to continue data collection.\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "During my work in clinical research I have aquired a special set of skills in working with data collection, data bases and data analysis. I am very much interested in sharing these skils and knowledge.\nI am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.\nI have work as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don’t hesitate to contact me if you need help on a project.\n\n\n\n\n\n\n\n\n\n\n\n\nPackage: REDCapCAST\n\n\n\nREDCap\n\n\nPackage\n\n\nR\n\n\nFOSS\n\n\n\nCasting data bases and handling castellated data sets.\n\n\n\n\n\n\nMay 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nProject: Foot database\n\n\n\nREDCap\n\n\nProject\n\n\nR\n\n\nConsultant\n\n\n\nComprehensive data and data base migration to continue data collection.\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
