@@ -1,6 +1,7 @@
 ---
 title: "ESOC 2023: Predicting physical activity level after stroke"
 date: 2023-05-03
+image: images/esoc2023.png
 description: A little background to out abstract presented at the ESOC 2023 conference in Munich. 
 categories:
   - Conference abstract
@@ -9,16 +10,34 @@ categories:
   - R
 ---
 
+::: callout-warning
+## More is coming
+
+More will be added before ESOC 2023
+:::
+
 ## Intro
 
 I am presenting a poster at European Stroke Organisation Conference 2023 on predicting changes in physical activity after stroke.
+
+The poster will be part of the [poster viewing programme on Wednesday, May 24 2023](https://apps.congrex.com/esoc2023/en-GB/pag/presentation/350689).
 
 ## Background
 
 We have been interested in trying to predict patients at increased risk of physical activity decline after stroke.
 
 ::: callout-note
-## Non-published
+## Non-published results
 
 Please note, that tables and figures presented here are not yet published, certainly not peer-reviewed, and definitely subject to change.
 :::
+
+## About the poster
+
+I wanted to divert from the traditional text heavy poster format. For the session at ESOC, I will be at the poster stand for most of the time to talk about our work. THe abstract will be available for download for the participants.
+
+The poster is created in PowerPoint, as this was where I had an available template. The template was later abandoned though.
+
+The fonts are [Alice](https://fonts.google.com/specimen/Alice/about) and [Jost\*](https://github.com/indestructible-type/Jost). Both are open source and free to use.
+
+The icons are from the [Material Design Icons](https://pictogrammers.com/library/mdi/), and also open source.

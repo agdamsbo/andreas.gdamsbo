@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome!",
     "section": "",
-    "text": "Hi! I am Andreas Gammelgaard Damsbo. I am a medical doctor and PhD-student at the Danish Stroke Centre, Aarhus University Hospital and Aarhus University.\nThis page is my professional website, where I will try to write about the research and other projects I am engaged with through my work. Don’t hesitate to contact me if you want to collaborate or want to share your thoughts on some of my work.\nI also do other things than work, which I might link to.\nTake care!"
+    "text": "Hi! I am Andreas Gammelgaard Damsbo. I am a medical doctor and PhD-student at the Danish Stroke Centre, Aarhus University Hospital and Aarhus University.\nThis page is my professional website, where I will write about the research and other projects I am engaged with through my work. Don’t hesitate to contact me if you want to collaborate or want to share your thoughts on some of my work.\nI also do other things than work, which I might link to.\nTake care!"
   },
   {
     "objectID": "health_data/ancle.html",
@@ -67,34 +67,41 @@
     "href": "academia.html",
     "title": "Research results",
     "section": "",
-    "text": "Here I will try to write about the research I am involved with. All of this work have been in corporation with my great colleagues and supervisors to who I am very grateful.\nI will also be writing about work and projects in R.\n\n\n\n\n\n\n\n\n\n\n\n\n\nESOC 2023: Predicting physical activity level after stroke\n\n\n\nConference abstract\n\n\nPhysical activity\n\n\nElastic net\n\n\nR\n\n\n\nA little background to out abstract presented at the ESOC 2023 conference in Munich.\n\n\n\n\n\n\nMay 3, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Here I will try to write about the research I am involved with. All of this work have been in corporation with my great colleagues and supervisors to who I am very grateful.\nI will also be writing about work and projects in R.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nESOC 2023: Predicting physical activity level after stroke\n\n\n\nConference abstract\n\n\nPhysical activity\n\n\nElastic net\n\n\nR\n\n\n\nA little background to out abstract presented at the ESOC 2023 conference in Munich.\n\n\n\n\n\n\nMay 3, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "academia/predict_pa.html",
     "href": "academia/predict_pa.html",
     "title": "ESOC 2023: Predicting physical activity level after stroke",
     "section": "",
-    "text": "I am presenting a poster at European Stroke Organisation Conference 2023 on predicting changes in physical activity after stroke."
+    "text": "More is coming\n\n\n\nMore will be added before ESOC 2023"
   },
   {
     "objectID": "academia/predict_pa.html#intro",
     "href": "academia/predict_pa.html#intro",
     "title": "ESOC 2023: Predicting physical activity level after stroke",
-    "section": "",
-    "text": "I am presenting a poster at European Stroke Organisation Conference 2023 on predicting changes in physical activity after stroke."
+    "section": "Intro",
+    "text": "Intro\nI am presenting a poster at European Stroke Organisation Conference 2023 on predicting changes in physical activity after stroke.\nThe poster will be part of the poster viewing programme on Wednesday, May 24 2023."
   },
   {
     "objectID": "academia/predict_pa.html#background",
     "href": "academia/predict_pa.html#background",
     "title": "ESOC 2023: Predicting physical activity level after stroke",
     "section": "Background",
-    "text": "Background\nWe have been interested in trying to predict patients at increased risk of physical activity decline after stroke.\n\n\n\n\n\n\nNon-published\n\n\n\nPlease note, that tables and figures presented here are not yet published, certainly not peer-reviewed, and definitely subject to change."
+    "text": "Background\nWe have been interested in trying to predict patients at increased risk of physical activity decline after stroke.\n\n\n\n\n\n\nNon-published results\n\n\n\nPlease note, that tables and figures presented here are not yet published, certainly not peer-reviewed, and definitely subject to change."
+  },
+  {
+    "objectID": "academia/predict_pa.html#about-the-poster",
+    "href": "academia/predict_pa.html#about-the-poster",
+    "title": "ESOC 2023: Predicting physical activity level after stroke",
+    "section": "About the poster",
+    "text": "About the poster\nI wanted to divert from the traditional text heavy poster format. For the session at ESOC, I will be at the poster stand for most of the time to talk about our work. THe abstract will be available for download for the participants.\nThe poster is created in PowerPoint, as this was where I had an available template. The template was later abandoned though.\nThe fonts are Alice and Jost*. Both are open source and free to use.\nThe icons are from the Material Design Icons, and also open source."
   },
   {
     "objectID": "health-data.html",
     "href": "health-data.html",
     "title": "Health Data projects",
     "section": "",
-    "text": "During my work in clinical research I have aquired a special set of skills in working with data collection, data bases and data analysis. I am very much interested in sharing these skils and knowledge.\nI am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.\nI have work as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don’t hesitate to contact me if you need help on a project.\n\n\n\n\n\n\n\n\n\n\n\n\nPackage: REDCapCAST\n\n\n\nREDCap\n\n\nPackage\n\n\nR\n\n\nFOSS\n\n\n\nCasting data bases and handling castellated data sets.\n\n\n\n\n\n\nMay 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nProject: Foot database\n\n\n\nREDCap\n\n\nProject\n\n\nR\n\n\nConsultant\n\n\n\nComprehensive data and data base migration to continue data collection.\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "During my work in clinical research I have acquired a special set of skills in working with data collection, data bases and data analysis. I am very much interested in sharing these skils and knowledge.\nI am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.\nI have worked as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don’t hesitate to contact me if you need help on a project.\n\n\n\n\n\n\n\n\n\n\n\n\nPackage: REDCapCAST\n\n\n\nREDCap\n\n\nPackage\n\n\nR\n\n\nFOSS\n\n\n\nCasting data bases and handling castellated data sets.\n\n\n\n\n\n\nMay 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nProject: Foot database\n\n\n\nREDCap\n\n\nProject\n\n\nR\n\n\nConsultant\n\n\n\nComprehensive data and data base migration to continue data collection.\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
