@@ -2,7 +2,8 @@
 title: "ESOC 2023: Predicting physical activity level after stroke"
 date: 2023-05-03
 image: images/esoc2023.png
-description: A little background to out abstract presented at the ESOC 2023 conference in Munich. 
+description: A little background to our abstract presented at the ESOC 2023 conference in Munich. 
+bibliography: references.bib
 categories:
   - Conference abstract
   - Physical activity
@@ -10,17 +11,19 @@ categories:
   - R
 ---
 
-::: callout-warning
-## More is coming
-
-More will be added before ESOC 2023
-:::
-
 ## Intro
 
 I am presenting a poster at European Stroke Organisation Conference 2023 on predicting changes in physical activity after stroke.
 
 The poster will be part of the [poster viewing programme on Wednesday, May 24 2023](https://apps.congrex.com/esoc2023/en-GB/pag/presentation/350689).
+
+## About the poster
+
+I wanted to divert from the traditional text heavy poster format. For the session at ESOC, I will be at the poster stand for most of the time to talk about our work. The abstract will be available for download for the participants.
+
+The poster is created in PowerPoint, as this was where I had an available template. The template was later abandoned though. The font used is the free and open source font [Jost\*](https://github.com/indestructible-type/Jost). Inspired by German design tradition. Icons are from the [Material Design Icons](https://pictogrammers.com/library/mdi/), and also open source.
+
+See the [poster here.](images/esoc2023poster.pdf)
 
 ## Background
 
@@ -32,12 +35,157 @@ We have been interested in trying to predict patients at increased risk of physi
 Please note, that tables and figures presented here are not yet published, certainly not peer-reviewed, and definitely subject to change.
 :::
 
-## About the poster
+## Methods
 
-I wanted to divert from the traditional text heavy poster format. For the session at ESOC, I will be at the poster stand for most of the time to talk about our work. THe abstract will be available for download for the participants.
+All analysis were performed using R and RStudio. We used the elastic net regression model as implemented in the `glmnet`-package for R.^[Versions of `glmnet` also exists for MATLAB and Python]
 
-The poster is created in PowerPoint, as this was where I had an available template. The template was later abandoned though.
+I have used the great book "An introduction to statistical learning with applications in R".[@jamesIntroductionStatisticalLearning2021] This book [is freely available](https://hastie.su.domains/ISLR2/ISLRv2_website.pdf) and the authors have even created small talks on each chapter (though only for the first edition). I believe this book is the main curriculum for beginning work with statistical learning (or machine learning, but that matter).
 
-The fonts are [Alice](https://fonts.google.com/specimen/Alice/about) and [Jost\*](https://github.com/indestructible-type/Jost). Both are open source and free to use.
+The script used for creating a regularised prediction model is below.
 
-The icons are from the [Material Design Icons](https://pictogrammers.com/library/mdi/), and also open source.
+```{r}
+#| eval: false
+#| code-fold: true
+
+## ====================================================================
+## Step 0: data import and wrangling
+## ====================================================================
+
+# source("data_format.R")
+y1<-factor(as.integer(y)-1) ## Outcome is required to be factor of 0 or 1.
+
+
+## ====================================================================
+## Step 1: settings
+## ====================================================================
+
+## Folds
+K=10
+set.seed(3)
+c<-caret::createFolds(y=y, 
+                      k = K, 
+                      list = FALSE, 
+                      returnTrain = TRUE) # Foldids for alpha tuning
+
+## Defining tuning parameters
+lambdas=2^seq(-10, 5, 1)
+alphas<-seq(0,1,.1)
+
+## Weights for models
+weighted=TRUE
+if (weighted == TRUE) {
+  wght<-as.vector(1 - (table(y)[y] / length(y)))
+} else {
+  wght <- rep(1, nrow(y))
+}
+
+
+## Standardise numeric
+## Centered and 
+
+
+
+## ====================================================================
+## Step 2: all cross validations for each alpha
+## ====================================================================
+
+library(furrr)
+library(purrr)
+library(doMC)
+registerDoMC(cores=6)
+
+# Nested CVs with analysis for all lambdas for each alpha
+# 
+set.seed(3)
+cvs <- future_map(alphas, function(a){
+  cv.glmnet(model.matrix(~.-1,X),
+            y1,
+            weights = wght,
+            lambda=lambdas, 
+            type.measure = "deviance", # This is standard measure and recommended for tuning
+            foldid = c, # Per recommendation the folds are kept for alpha optimisation
+            alpha=a,
+            standardize=TRUE,
+            family=quasibinomial,
+            keep=TRUE) # Same as binomial, but not as picky
+})
+
+## ====================================================================
+# Step 3: optimum lambda for each alpha
+## ====================================================================
+
+
+# For each alpha, lambda is chosen for the lowest meassure (deviance)
+each_alpha <- sapply(seq_along(alphas), function(id) {
+  each_cv <- cvs[[id]]
+  alpha_val <- alphas[id]
+  index_lmin <- match(each_cv$lambda.min, 
+                      each_cv$lambda)
+  c(lamb = each_cv$lambda.min, 
+    alph = alpha_val,
+    cvm = each_cv$cvm[index_lmin])
+})
+
+# Best lambda
+best_lamb <- min(each_alpha["lamb", ])
+
+# Alpha is chosen for best lambda with lowest model deviance, each_alpha["cvm",]
+best_alph <- each_alpha["alph",][each_alpha["cvm",]==min(each_alpha["cvm",]
+                                                         [each_alpha["lamb",] %in% best_lamb])]
+
+## https://stackoverflow.com/questions/42007313/plot-an-roc-curve-in-r-with-ggplot2
+p_roc<-roc.glmnet(cvs[[1]]$fit.preval, newy = y)[[match(best_alph,alphas)]]|> # Plots performance from model with best alpha
+  ggplot(aes(FPR,TPR)) + 
+  geom_step() +
+  coord_cartesian(xlim=c(0,1), ylim=c(0,1)) +
+  geom_abline()+
+  theme_bw()
+
+## ====================================================================
+# Step 4: Creating the final model
+## ====================================================================
+
+source("regular_fun.R") # Custom function
+optimised_model<-regular_fun(X,y1,K,lambdas=best_lamb,alpha=best_alph) 
+# With lambda and alpha specified, the function is just a k-fold cross-validation wrapper, 
+# but keeps model performance figures from each fold.
+
+list2env(optimised_model,.GlobalEnv)
+# Function outputs a list, which is unwrapped to Env.
+# See source script for reference.
+
+## ====================================================================
+# Step 5: creating table of coefficients for inference
+## ====================================================================
+
+Bmatrix<-matrix(unlist(B),ncol=10)
+Bmedian<-apply(Bmatrix,1,median)
+Bmean<-apply(Bmatrix,1,mean)
+
+reg_coef_tbl<-tibble(
+  name = c("Intercept",Hmisc::label(X)),
+  medianX = round(Bmedian,5),
+  ORmed = round(exp(Bmedian),5),
+  meanX = round(Bmean,5),
+  ORmea = round(exp(Bmean),5))%>%
+  # arrange(desc(abs(medianX)))%>%
+  gt()
+
+## ====================================================================
+# Step 6: plotting predictive performance
+## ====================================================================
+
+reg_cfm<-confusionMatrix(cMatTest)
+reg_auc_sum<-summary(auc_test[,1])
+
+## ====================================================================
+# Step 7: Packing list to save in loop
+## ====================================================================
+
+ls[[i]] <- list("RegularisedCoefs"=reg_coef_tbl,
+                "bestA"=best_alph,
+                "bestL"=best_lamb,
+                "ConfusionMatrx"=reg_cfm,
+                "AUROC"=reg_auc_sum)
+```
+

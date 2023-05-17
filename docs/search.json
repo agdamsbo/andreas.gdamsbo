@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome!",
     "section": "",
-    "text": "Hi! I am Andreas Gammelgaard Damsbo. I am a medical doctor and PhD-student at the Danish Stroke Centre, Aarhus University Hospital and Aarhus University.\nThis page is my professional website, where I will write about the research and other projects I am engaged with through my work. Don’t hesitate to contact me if you want to collaborate or want to share your thoughts on some of my work.\nI also do other things than work, which I might link to.\nTake care!"
+    "text": "Hi! I am Andreas Gammelgaard Damsbo. I am a medical doctor and PhD-student at the Danish Stroke Centre, Aarhus University Hospital and Department of Clinical Medicine, Aarhus University.\nThis is my professional website, where I will write about the research and other projects I am engaged with through my work. Don’t hesitate to contact me if you want to collaborate or want to share your thoughts on some of my work.\nI use open source software in my work as much as possible, and document my work following the same ideology for others to get inspired or criticise. Likewise, the source for this page is freely available on GitHub.\nI also do other things than work, which I might link to or write about.\nTake care!"
   },
   {
     "objectID": "health_data/ancle.html",
@@ -67,21 +67,28 @@
     "href": "academia.html",
     "title": "Research results",
     "section": "",
-    "text": "Here I will try to write about the research I am involved with. All of this work have been in corporation with my great colleagues and supervisors to who I am very grateful.\nI will also be writing about work and projects in R.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nESOC 2023: Predicting physical activity level after stroke\n\n\n\nConference abstract\n\n\nPhysical activity\n\n\nElastic net\n\n\nR\n\n\n\nA little background to out abstract presented at the ESOC 2023 conference in Munich.\n\n\n\n\n\n\nMay 3, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Here I will try to write about the research I am involved with. All of this work have been in corporation with my great colleagues and supervisors to who I am very grateful.\nI will also be writing about work and projects in R.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nESOC 2023: Predicting physical activity level after stroke\n\n\n\nConference abstract\n\n\nPhysical activity\n\n\nElastic net\n\n\nR\n\n\n\nA little background to our abstract presented at the ESOC 2023 conference in Munich.\n\n\n\n\n\n\nMay 3, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "academia/predict_pa.html",
     "href": "academia/predict_pa.html",
     "title": "ESOC 2023: Predicting physical activity level after stroke",
     "section": "",
-    "text": "More is coming\n\n\n\nMore will be added before ESOC 2023"
+    "text": "I am presenting a poster at European Stroke Organisation Conference 2023 on predicting changes in physical activity after stroke.\nThe poster will be part of the poster viewing programme on Wednesday, May 24 2023."
   },
   {
     "objectID": "academia/predict_pa.html#intro",
     "href": "academia/predict_pa.html#intro",
     "title": "ESOC 2023: Predicting physical activity level after stroke",
-    "section": "Intro",
-    "text": "Intro\nI am presenting a poster at European Stroke Organisation Conference 2023 on predicting changes in physical activity after stroke.\nThe poster will be part of the poster viewing programme on Wednesday, May 24 2023."
+    "section": "",
+    "text": "I am presenting a poster at European Stroke Organisation Conference 2023 on predicting changes in physical activity after stroke.\nThe poster will be part of the poster viewing programme on Wednesday, May 24 2023."
+  },
+  {
+    "objectID": "academia/predict_pa.html#about-the-poster",
+    "href": "academia/predict_pa.html#about-the-poster",
+    "title": "ESOC 2023: Predicting physical activity level after stroke",
+    "section": "About the poster",
+    "text": "About the poster\nI wanted to divert from the traditional text heavy poster format. For the session at ESOC, I will be at the poster stand for most of the time to talk about our work. The abstract will be available for download for the participants.\nThe poster is created in PowerPoint, as this was where I had an available template. The template was later abandoned though. The font used is the free and open source font Jost*. Inspired by German design tradition. Icons are from the Material Design Icons, and also open source.\nSee the poster here."
   },
   {
     "objectID": "academia/predict_pa.html#background",
@@ -91,11 +98,18 @@
     "text": "Background\nWe have been interested in trying to predict patients at increased risk of physical activity decline after stroke.\n\n\n\n\n\n\nNon-published results\n\n\n\nPlease note, that tables and figures presented here are not yet published, certainly not peer-reviewed, and definitely subject to change."
   },
   {
-    "objectID": "academia/predict_pa.html#about-the-poster",
-    "href": "academia/predict_pa.html#about-the-poster",
+    "objectID": "academia/predict_pa.html#methods",
+    "href": "academia/predict_pa.html#methods",
     "title": "ESOC 2023: Predicting physical activity level after stroke",
-    "section": "About the poster",
-    "text": "About the poster\nI wanted to divert from the traditional text heavy poster format. For the session at ESOC, I will be at the poster stand for most of the time to talk about our work. THe abstract will be available for download for the participants.\nThe poster is created in PowerPoint, as this was where I had an available template. The template was later abandoned though.\nThe fonts are Alice and Jost*. Both are open source and free to use.\nThe icons are from the Material Design Icons, and also open source."
+    "section": "Methods",
+    "text": "Methods\nAll analysis were performed using R and RStudio. We used the elastic net regression model as implemented in the glmnet-package for R.1\nI have used the great book “An introduction to statistical learning with applications in R”.(James et al. 2021) This book is freely available and the authors have even created small talks on each chapter (though only for the first edition). I believe this book is the main curriculum for beginning work with statistical learning (or machine learning, but that matter).\nThe script used for creating a regularised prediction model is below.\n\n\nCode\n## ====================================================================\n## Step 0: data import and wrangling\n## ====================================================================\n\n# source(\"data_format.R\")\ny1&lt;-factor(as.integer(y)-1) ## Outcome is required to be factor of 0 or 1.\n\n\n## ====================================================================\n## Step 1: settings\n## ====================================================================\n\n## Folds\nK=10\nset.seed(3)\nc&lt;-caret::createFolds(y=y, \n                      k = K, \n                      list = FALSE, \n                      returnTrain = TRUE) # Foldids for alpha tuning\n\n## Defining tuning parameters\nlambdas=2^seq(-10, 5, 1)\nalphas&lt;-seq(0,1,.1)\n\n## Weights for models\nweighted=TRUE\nif (weighted == TRUE) {\n  wght&lt;-as.vector(1 - (table(y)[y] / length(y)))\n} else {\n  wght &lt;- rep(1, nrow(y))\n}\n\n\n## Standardise numeric\n## Centered and \n\n\n\n## ====================================================================\n## Step 2: all cross validations for each alpha\n## ====================================================================\n\nlibrary(furrr)\nlibrary(purrr)\nlibrary(doMC)\nregisterDoMC(cores=6)\n\n# Nested CVs with analysis for all lambdas for each alpha\n# \nset.seed(3)\ncvs &lt;- future_map(alphas, function(a){\n  cv.glmnet(model.matrix(~.-1,X),\n            y1,\n            weights = wght,\n            lambda=lambdas, \n            type.measure = \"deviance\", # This is standard measure and recommended for tuning\n            foldid = c, # Per recommendation the folds are kept for alpha optimisation\n            alpha=a,\n            standardize=TRUE,\n            family=quasibinomial,\n            keep=TRUE) # Same as binomial, but not as picky\n})\n\n## ====================================================================\n# Step 3: optimum lambda for each alpha\n## ====================================================================\n\n\n# For each alpha, lambda is chosen for the lowest meassure (deviance)\neach_alpha &lt;- sapply(seq_along(alphas), function(id) {\n  each_cv &lt;- cvs[[id]]\n  alpha_val &lt;- alphas[id]\n  index_lmin &lt;- match(each_cv$lambda.min, \n                      each_cv$lambda)\n  c(lamb = each_cv$lambda.min, \n    alph = alpha_val,\n    cvm = each_cv$cvm[index_lmin])\n})\n\n# Best lambda\nbest_lamb &lt;- min(each_alpha[\"lamb\", ])\n\n# Alpha is chosen for best lambda with lowest model deviance, each_alpha[\"cvm\",]\nbest_alph &lt;- each_alpha[\"alph\",][each_alpha[\"cvm\",]==min(each_alpha[\"cvm\",]\n                                                         [each_alpha[\"lamb\",] %in% best_lamb])]\n\n## https://stackoverflow.com/questions/42007313/plot-an-roc-curve-in-r-with-ggplot2\np_roc&lt;-roc.glmnet(cvs[[1]]$fit.preval, newy = y)[[match(best_alph,alphas)]]|&gt; # Plots performance from model with best alpha\n  ggplot(aes(FPR,TPR)) + \n  geom_step() +\n  coord_cartesian(xlim=c(0,1), ylim=c(0,1)) +\n  geom_abline()+\n  theme_bw()\n\n## ====================================================================\n# Step 4: Creating the final model\n## ====================================================================\n\nsource(\"regular_fun.R\") # Custom function\noptimised_model&lt;-regular_fun(X,y1,K,lambdas=best_lamb,alpha=best_alph) \n# With lambda and alpha specified, the function is just a k-fold cross-validation wrapper, \n# but keeps model performance figures from each fold.\n\nlist2env(optimised_model,.GlobalEnv)\n# Function outputs a list, which is unwrapped to Env.\n# See source script for reference.\n\n## ====================================================================\n# Step 5: creating table of coefficients for inference\n## ====================================================================\n\nBmatrix&lt;-matrix(unlist(B),ncol=10)\nBmedian&lt;-apply(Bmatrix,1,median)\nBmean&lt;-apply(Bmatrix,1,mean)\n\nreg_coef_tbl&lt;-tibble(\n  name = c(\"Intercept\",Hmisc::label(X)),\n  medianX = round(Bmedian,5),\n  ORmed = round(exp(Bmedian),5),\n  meanX = round(Bmean,5),\n  ORmea = round(exp(Bmean),5))%&gt;%\n  # arrange(desc(abs(medianX)))%&gt;%\n  gt()\n\n## ====================================================================\n# Step 6: plotting predictive performance\n## ====================================================================\n\nreg_cfm&lt;-confusionMatrix(cMatTest)\nreg_auc_sum&lt;-summary(auc_test[,1])\n\n## ====================================================================\n# Step 7: Packing list to save in loop\n## ====================================================================\n\nls[[i]] &lt;- list(\"RegularisedCoefs\"=reg_coef_tbl,\n                \"bestA\"=best_alph,\n                \"bestL\"=best_lamb,\n                \"ConfusionMatrx\"=reg_cfm,\n                \"AUROC\"=reg_auc_sum)"
+  },
+  {
+    "objectID": "academia/predict_pa.html#footnotes",
+    "href": "academia/predict_pa.html#footnotes",
+    "title": "ESOC 2023: Predicting physical activity level after stroke",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nVersions of glmnet also exists for MATLAB and Python↩︎"
   },
   {
     "objectID": "health-data.html",

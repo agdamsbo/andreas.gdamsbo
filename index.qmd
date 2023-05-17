@@ -1,8 +1,8 @@
 ---
 title: "Welcome!"
 about:
-  template: solana
-  image: "/images/portrait.png"
+  template: trestles
+  image: "/images/portrait.jpg"
   links:
       - href: "mailto:andrlr@rm.dk"
         icon: "hospital"
@@ -11,10 +11,10 @@ about:
         text: GitHub
         icon: "github"
       - href: "https://orcid.org/0000-0002-7559-1154"
-        icon: paperclip
+        icon: file-earmark-person
         text: ORCiD
       - href: "https://git.nikohuru.dk/andreas/cv/raw/branch/main/cv.pdf"
-        icon: "file-earmark-person"
+        icon: paperclip
         text: CV
       - href: "https://social.gdamsbo.dk/@andreas"
         icon: "mastodon"
@@ -22,20 +22,12 @@ about:
         rel: "me"
 ---
 
-```{r include=FALSE}
-# Notes
-# 
-# icons: https://icons.getbootstrap.com/
-# 
-# multilanguage: https://quarto-dev.marioangst.com/en/blog/posts/multi-language-quarto/
-#
-# knitr::knit("cv/cv.Rmd",output = "cv/cv.pdf",quiet = TRUE,)
-```
+Hi! I am **Andreas Gammelgaard Damsbo**. I am a medical doctor and PhD-student at the [Danish Stroke Centre, Aarhus University Hospital](https://www.en.auh.dk/departments/danish-stroke-centre/) and [Department of Clinical Medicine, Aarhus University](https://pure.au.dk/portal/en/persons/andreas-gammelgaard-damsbo(e3c4afce-3eba-4456-8b8b-2fd90775c87a).html).
 
-Hi! I am **Andreas Gammelgaard Damsbo**. I am a medical doctor and PhD-student at the [Danish Stroke Centre, Aarhus University Hospital](https://www.en.auh.dk/departments/danish-stroke-centre/) and [Aarhus University](https://pure.au.dk/portal/en/persons/andreas-gammelgaard-damsbo(e3c4afce-3eba-4456-8b8b-2fd90775c87a).html).
+This is my professional website, where I will write about the research and other projects I am engaged with through my work. Don't hesitate to contact me if you want to collaborate or want to share your thoughts on some of my work.
 
-This page is my professional website, where I will write about the research and other projects I am engaged with through my work. Don't hesitate to contact me if you want to collaborate or want to share your thoughts on some of my work.
+I use open source software in my work as much as possible, and document my work following the same ideology for others to get inspired or criticise. Likewise, the source for this page is freely available [on GitHub](https://github.com/agdamsbo/andreas.gdamsbo).
 
-I also do other things than work, which I might link to.
+I also do other things than work, which I might link to or write about.
 
 Take care!
