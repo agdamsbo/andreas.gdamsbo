@@ -1,0 +1,4 @@
+# freeze computational output
+freeze: false
+date-modified: last-modified
+bibliography: references.bib

@@ -3,15 +3,13 @@ title: "Research results"
 listing:
   contents:
   - "academia/*.qmd"
-  type: grid
+  type: default
   sort: "date desc"
   categories: numbered
 ---
 
-::: topbr
-Here I will try to write about the research I am involved with. All of this work have been in corporation with my great colleagues and supervisors to who I am very grateful.
+I want to share the progress of the research I am involved with. All of this work have been in corporation with my great colleagues and supervisors to who I am very grateful. I will be sharing publications, code, posters and other small project along the way.
 
-I will also be writing about work and projects in R.
-:::
+I have published most of my coding to GitHub (or my private Gitea instance) already, but I want to share the thoughts behind as well.
 
-
+You are welcome to comment or use any ideas shared.

@@ -3,7 +3,7 @@ title: "Health Data projects"
 listing:
   contents:
   - "health_data/*.qmd"
-  type: grid
+  type: default
   sort: "date desc"
   categories: numbered
 ---
@@ -13,3 +13,5 @@ During my work in clinical research I have acquired a special set of skills in w
 I am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.
 
 I have worked as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don't hesitate to [contact me](mailto:andreas@gdamsbo.dk) if you need help on a project.
+
+I also just want to underline, that I am by no means a software engineer, but a medical doctor with a great interest in data science. No coding shared here comes with no guarantees, and I will not be liable to any errors.

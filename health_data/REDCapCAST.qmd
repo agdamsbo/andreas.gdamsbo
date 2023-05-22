@@ -9,6 +9,12 @@ categories:
   - FOSS
 ---
 
-## On the shoulders..
+## Working with REDCap data
 
-This package started as a fork. It is on [GitHub](https://github.com/agdamsbo/REDCapCAST) for now, but I plan on publishing on CRAN.
+In our group (and at most Danish public research institutions) we collect clinical data using [REDCap](https://www.project-redcap.org/).
+
+We also use the "longitudinal project" option. This gives some issues with castellated data. Different approaches to handling this [problem exists](https://redcap-tools.github.io/projects/), but none that kept the focused data acquisition approach of the very nice [`REDCapR`-library](https://ouhscbbmc.github.io/REDCapR/).
+
+The [`REDCapCAST`-library](https://github.com/agdamsbo/REDCapCAST/) is based on the [`REDCapRITS`-library](https://github.com/SpectrumHealthResearch/REDCapRITS), has been documented elsewhere, and is quickly approaching submission to CRAN.
+
+I am currently working on a handbook on using REDCap in R implementing the `REDCapCAST`-library. I hope to soon be able to release a first version, and until then, the work in progress [can be followed](https://github.com/agdamsbo/redcap-r-handbook).

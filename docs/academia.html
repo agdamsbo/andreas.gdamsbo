@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -92,6 +92,12 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean"
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
 <script async="" src="https://stats.nikohuru.dk/script.js" data-website-id="08705c1c-0546-4567-8972-e3b01e1bc00b"></script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -169,26 +175,27 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="topbr">
 <p>Here I will try to write about the research I am involved with. All of this work have been in corporation with my great colleagues and supervisors to who I am very grateful.</p>
 <p>I will also be writing about work and projects in R.</p>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Conference abstract,Physical activity,Elastic net,R" data-listing-date-sort="1683064800000" data-listing-file-modified-sort="1684752890729" data-listing-date-modified-sort="1684752890000" data-listing-reading-time-sort="5">
+<div class="thumbnail">
+<p><a href="./academia/predict_pa.html"> <img src="./academia/images/esoc2023.png" class="thumbnail-image"> </a></p>
 </div>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Conference abstract,Physical activity,Elastic net,R" data-listing-date-sort="1683064800000" data-listing-file-modified-sort="1684303626530" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<a href="./academia/predict_pa.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./academia/images/esoc2023.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
+<div class="body">
+<a href="./academia/predict_pa.html">
+<h3 class="no-anchor listing-title">
 ESOC 2023: Predicting physical activity level after stroke
-</h5>
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Conference abstract'); return false;">
 Conference abstract
@@ -203,20 +210,19 @@ Elastic net
 R
 </div>
 </div>
-<div class="card-text listing-description">
-A little background to our abstract presented at the ESOC 2023 conference in Munich.
+<a href="./academia/predict_pa.html">
+<div class="listing-description">
+<p>A little background to our abstract presented at the ESOC 2023 conference in Munich.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
+</a>
 </div>
+<div class="metadata">
+<a href="./academia/predict_pa.html">
 <div class="listing-date">
 May 3, 2023
 </div>
-</div>
-</div>
-</div>
 </a>
+</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
@@ -581,6 +587,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (!isInternal(link.href)) {
           // target, if specified
           link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
       }
     }
 });

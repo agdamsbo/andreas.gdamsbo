@@ -13,6 +13,9 @@ website:
   repo-url: https://github.com/agdamsbo/andreas.gdamsbo
   repo-actions: [source, issue]
   page-navigation: true
+  comments:
+    hypothesis: 
+      theme: clean
   search:
     type: overlay
   navbar:
@@ -34,13 +37,17 @@ website:
 
 format:
   html:
+    code-fold: true
+    code-overflow: wrap
     theme: 
       dark: solar
       light: lumen
     # css: styles.css
     toc: true
     link-external-newwindow: true
+    link-external-icon: true
     include-in-header: umami.html
+    email-obfuscation: references
 
 editor: visual
 

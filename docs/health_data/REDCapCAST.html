@@ -63,6 +63,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean"
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
 <script async="" src="https://stats.nikohuru.dk/script.js" data-website-id="08705c1c-0546-4567-8972-e3b01e1bc00b"></script>
 
 
@@ -120,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#on-the-shoulders.." id="toc-on-the-shoulders.." class="nav-link active" data-scroll-target="#on-the-shoulders..">On the shoulders..</a></li>
+  <li><a href="#working-with-redcap-data" id="toc-working-with-redcap-data" class="nav-link active" data-scroll-target="#working-with-redcap-data">Working with REDCap data</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/agdamsbo/andreas.gdamsbo/blob/main/health_data/REDCapCAST.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/agdamsbo/andreas.gdamsbo/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -155,15 +161,24 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">May 22, 2023</p>
+    </div>
+  </div>
     
   </div>
   
 
 </header>
 
-<section id="on-the-shoulders.." class="level2">
-<h2 class="anchored" data-anchor-id="on-the-shoulders..">On the shoulders..</h2>
-<p>This package started as a fork. It is on <a href="https://github.com/agdamsbo/REDCapCAST">GitHub</a> for now, but I plan on publishing on CRAN.</p>
+<section id="working-with-redcap-data" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-redcap-data">Working with REDCap data</h2>
+<p>In our group (and at most Danish public research institutions) we collect clinical data using <a href="https://www.project-redcap.org/">REDCap</a>.</p>
+<p>We also use the “longitudinal project” option. This gives some issues with castellated data. Different approaches to handling this <a href="https://redcap-tools.github.io/projects/">problem exists</a>, but none that kept the focused data acquisition approach of the very nice <a href="https://ouhscbbmc.github.io/REDCapR/"><code>REDCapR</code>-library</a>.</p>
+<p>The <a href="https://github.com/agdamsbo/REDCapCAST/"><code>REDCapCAST</code>-library</a> is based on the <a href="https://github.com/SpectrumHealthResearch/REDCapRITS"><code>REDCapRITS</code>-library</a>, has been documented elsewhere, and is quickly approaching submission to CRAN.</p>
+<p>I am currently working on a handbook on using REDCap in R implementing the <code>REDCapCAST</code>-library. I hope to soon be able to release a first version, and until then, the work in progress <a href="https://github.com/agdamsbo/redcap-r-handbook">can be followed</a>.</p>
 
 
 </section>
@@ -527,6 +542,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (!isInternal(link.href)) {
           // target, if specified
           link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
       }
     }
 });

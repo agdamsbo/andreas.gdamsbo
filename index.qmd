@@ -1,5 +1,6 @@
 ---
 title: "Welcome!"
+comments: false
 about:
   template: trestles
   image: "/images/portrait.jpg"

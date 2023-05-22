@@ -3,7 +3,6 @@ title: "ESOC 2023: Predicting physical activity level after stroke"
 date: 2023-05-03
 image: images/esoc2023.png
 description: A little background to our abstract presented at the ESOC 2023 conference in Munich. 
-bibliography: references.bib
 categories:
   - Conference abstract
   - Physical activity
@@ -15,29 +14,26 @@ categories:
 
 I am presenting a poster at European Stroke Organisation Conference 2023 on predicting changes in physical activity after stroke.
 
-The poster will be part of the [poster viewing programme on Wednesday, May 24 2023](https://apps.congrex.com/esoc2023/en-GB/pag/presentation/350689).
+The poster will be part of the [poster viewing programme on Wednesday, May 24 2023](https://apps.congrex.com/esoc2023/en-GB/pag/faculty/1149907).
 
 ## About the poster
+
+See the [poster here.](images/esoc2023poster.pdf)
 
 I wanted to divert from the traditional text heavy poster format. For the session at ESOC, I will be at the poster stand for most of the time to talk about our work. The abstract will be available for download for the participants.
 
 The poster is created in PowerPoint, as this was where I had an available template. The template was later abandoned though. The font used is the free and open source font [Jost\*](https://github.com/indestructible-type/Jost). Inspired by German design tradition. Icons are from the [Material Design Icons](https://pictogrammers.com/library/mdi/), and also open source.
 
-See the [poster here.](images/esoc2023poster.pdf)
-
 ## Background
 
+Physical activity (PA) reduces the risk of stroke and improves functional outcome. We aimed to investigate predictors for decrease and increase in PA after stroke.
 We have been interested in trying to predict patients at increased risk of physical activity decline after stroke.
-
-::: callout-note
-## Non-published results
-
-Please note, that tables and figures presented here are not yet published, certainly not peer-reviewed, and definitely subject to change.
-:::
 
 ## Methods
 
-All analysis were performed using R and RStudio. We used the elastic net regression model as implemented in the `glmnet`-package for R.^[Versions of `glmnet` also exists for MATLAB and Python]
+All analysis were performed using R and RStudio. We used the elastic net regression model as implemented in the [`glmnet`-package](https://glmnet.stanford.edu/articles/glmnet.html) for R.[^1]
+
+[^1]: Versions of `glmnet` also exists for MATLAB and Python
 
 I have used the great book "An introduction to statistical learning with applications in R".[@jamesIntroductionStatisticalLearning2021] This book [is freely available](https://hastie.su.domains/ISLR2/ISLRv2_website.pdf) and the authors have even created small talks on each chapter (though only for the first edition). I believe this book is the main curriculum for beginning work with statistical learning (or machine learning, but that matter).
 
@@ -45,7 +41,7 @@ The script used for creating a regularised prediction model is below.
 
 ```{r}
 #| eval: false
-#| code-fold: true
+#| code-summary: Optimisation and regularisation steps
 
 ## ====================================================================
 ## Step 0: data import and wrangling
@@ -189,3 +185,6 @@ ls[[i]] <- list("RegularisedCoefs"=reg_coef_tbl,
                 "AUROC"=reg_auc_sum)
 ```
 
+## Publication status
+
+We have recently applied for additional registry based data on socio economic status to include in the analysis. We are awaiting this data before publishing our main article on this project.

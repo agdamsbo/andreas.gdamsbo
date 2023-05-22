@@ -1,0 +1,184 @@
+---
+title: "Package: stRoke"
+date: 2023-05-17
+description: Collection of tools used in stroke research, but widely applicable. 
+categories:
+  - REDCap
+  - Package
+  - R
+  - FOSS
+---
+
+## My first package
+
+During my early use of *R*, I started to collect my own solutions to problems in an package. At some point I realised that most of the problems were already solved elsewere and typically more elegantly. I took the best functions and moved them to a new project, the `stRoke`-package.[@stRoke] This package have been used for learning and practising, but it has also been published to CRAN and I will keep including new functions in the package.
+
+The main goal has been learning, but I also wanted to share my work for others to use or modify.
+
+## Content of the `stRoke` package
+
+The different functions have been documented in the [package vignette](https://agdamsbo.github.io/stRoke/articles/toolbox.html). Here I will just discuss a few favourite examples.
+
+### Plotting text with contrast based on background
+
+The first example is just a small exercise in implementing ideas as a function.
+
+Inspired by a [discussion on StackOverflow](https://stackoverflow.com/questions/1855884/determine-font-color-based-on-background-color) and [an example](https://stackoverflow.com/a/66669838/21019325), I created a function to determine contrast levels. My use case was colouring text based on background colour, but the function can be used in many other cases.
+
+Similar functionality is used in `Polychrome::swatch()` or `scales::show_col()`, but the function used for determining contrast here is [a little crude](https://github.com/r-lib/scales/blob/b3df2fb6efd5b440377b0699d3830f1082fa3140/R/colour-manip.r#L74). The `contrast_text()` is a little more sophisticated, and can be used on its own. Is it necessary? You'll decide for yourself.
+
+```{r}
+#| label: contrast_text-simple
+#| code-fold: false
+#| code-summary: Demonstrating `win_prob()`
+library(stRoke)
+contrast_text(c("red","yellow","blue","green","purple", "orange","white","black"))
+```
+
+To give an example, I have modified the [`scales::show_col()`](https://github.com/r-lib/scales/blob/b3df2fb6efd5b440377b0699d3830f1082fa3140/R/colour-manip.r#L72-L115).
+
+```{r}
+#| label: color_plot-definition
+#| code-summary: A modification of the scales::show_col() function to use stRoke::contrast_text() for text coloring.
+## Operator used by library(scales), but not exported
+## Defined for convenience. It is a neat operator.
+`%||%` <- function(a,b){
+  if (is.null(a)) b else a
+}
+
+## Modified color_plot() function
+color_plot <-
+  function (colours,
+            labels = TRUE,
+            borders = NULL,
+            cex_label = 1,
+            ncol = NULL,
+            ...)
+  {
+    n <- length(colours)
+    ncol <- ncol %||% ceiling(sqrt(length(colours)))
+    nrow <- ceiling(n / ncol)
+    colours <- c(colours, rep(NA, nrow * ncol - length(colours)))
+    colours <- matrix(colours, ncol = ncol, byrow = TRUE)
+    old <- par(pty = "s", mar = c(0, 0, 0, 0))
+    on.exit(par(old))
+    size <- max(dim(colours))
+    plot(
+      c(0, size),
+      c(0, -size),
+      type = "n",
+      xlab = "",
+      ylab = "",
+      axes = FALSE
+    )
+    rect(
+      col(colours) - 1,
+      -row(colours) + 1,
+      col(colours),
+      -row(colours),
+      col = colours,
+      border = borders
+    )
+    if (labels) {
+      label_col <- contrast_text(colours,...)
+      text(col(colours) - 0.5,
+           -row(colours) + 0.5,
+           colours,
+           cex = cex_label,
+           col = label_col)
+    }
+  }
+```
+
+```{r}
+#| label: contrast_text-implementation
+#| code-fold: false
+#| fig-height: 4
+#| fig-width: 5
+#| fig-align: center
+#| fig-cap: Demonstrating the `contrast_text()`
+library(pals)
+par(bg=NULL)
+colors <- sample(pals::polychrome(),size = 20)
+color_plot(colors,method="relative")
+```
+
+Writing this example, I found some ideas for colouring on [this discussion thread](https://stackoverflow.com/questions/9563711/r-color-palettes-for-many-data-classes).
+
+### Analysing modified Rankin Scale (mRS) scores
+
+I believe, that the analysis of mRS scores is a key discipline in clinical stroke research, as this measure of functional outcome has been a favourite for major stroke trials.
+
+Overall, the mRS has been analysed in a dichotomised fashion with different cutoffs and using ordinal logistic regression. Most recently a new approach has gained some traction: "Tournament Methods".[@churilov]
+
+#### `win_prob()`
+
+This approach has been implemented in the `genodds`-package[@genodds], and based on the work by @zou2022, I have created the `win_prob()` function:
+
+```{r}
+#| label: win_prob-example
+#| code-fold: false
+#| code-summary: Demonstrating `win_prob()`
+library(stRoke)
+win_prob(
+  data = stRoke::talos,
+  response = "mrs_6",
+  group = "rtreat",
+  sample.size = FALSE,
+  print.tables = FALSE
+)
+```
+
+#### `generic_stroke()`
+
+The author of the `genodds`-package is also maintaining the `rankinPlot`-package, which makes it very easy to create the classic Grotta Bars visualising changes in mRS score distributions.[@rankinPlot]
+
+I have created the `generic_stroke()`-function to easily create table one, Grotta bars and binary or ordinal logistic regression plots with confidence intervals.
+
+```{r}
+#| label: generic_stroke-example
+#| code-fold: false
+#| message: false
+library(stRoke)
+lst <- generic_stroke(df = talos,
+               "rtreat",
+               "mrs_6",
+               variables = c("hypertension", "diabetes", "civil"))
+# names(lst)
+```
+
+The first element in the function is a classical table 1 created using the great package `gtsummary`[@gtsummary] using `tbl_summary()`:
+
+```{r}
+#| label: generic_stroke-tbl1
+#| code-summary: Printing Table 1
+#| message: false
+library(gtsummary)
+lst$`Table 1` |> as_gt()
+```
+
+The next element is a figure showcasing the `grottaBar()` function.
+
+```{r}
+#| label: generic_stroke-grotta
+#| code-summary: Printing Figure 1
+#| fig-height: 3
+#| fig-width: 10
+#| fig-align: center
+print(lst$`Figure 1`)
+```
+
+The function has been expanded lately to allow further customisation. The `generic_stroke()` uses the default implementation.
+
+The last element is the only original part of the implementation. This is a horizontal forest plot of regression analysis values from the `ci_plot()` function, which plots model coefficients with confidence intervals based on a supplied model. Supports binary and ordinal logistic regression and other functions formatted in a similar way.
+
+```{r}
+#| label: generic_stroke-ci
+#| code-summary: Printing Figure 2
+#| fig-height: 3
+#| fig-width: 10
+#| fig-align: center
+print(lst$`Figure 2`)
+```
+
+The output is a ggplot-element and is highly modifiable.

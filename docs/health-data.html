@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -92,6 +92,12 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean"
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
 <script async="" src="https://stats.nikohuru.dk/script.js" data-website-id="08705c1c-0546-4567-8972-e3b01e1bc00b"></script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -148,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Consultant">Consultant <span class="quarto-category-count">(1)</span></div><div class="category" data-category="FOSS">FOSS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Package">Package <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Project">Project <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="REDCap">REDCap <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Consultant">Consultant <span class="quarto-category-count">(1)</span></div><div class="category" data-category="FOSS">FOSS <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Package">Package <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Project">Project <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(3)</span></div><div class="category" data-category="REDCap">REDCap <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -171,21 +177,26 @@ ul.task-list li input[type="checkbox"] {
 
 <p>During my work in clinical research I have acquired a special set of skills in working with data collection, data bases and data analysis. I am very much interested in sharing these skils and knowledge.</p>
 <p>I am primarily working with R and REDCap. I have published one R package to CRAN and am actively maintaining two other packages on GitHub (on is on its way to CRAN). I am also working on a handbook for clinical researchers on working with R and REDCap.</p>
-<p>I have worked as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don’t hesitate to <a href="mailto:andreas@gdamsbo.dk">contact me</a> if you need help on a project.</p>
+<p>I have worked as a data science consultant on a few projects. Here I will also share a few of them as a portfolio. Please don’t hesitate to <a href="mailto:andreas@gdamsbo.dk" class="email">contact me</a> if you need help on a project.</p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="REDCap,Package,R,FOSS" data-listing-date-sort="1683064800000" data-listing-file-modified-sort="1683110821919" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="./health_data/REDCapCAST.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Package: REDCapCAST
-</h5>
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="REDCap,Package,R,FOSS" data-listing-date-sort="1684274400000" data-listing-file-modified-sort="1684752278581" data-listing-date-modified-sort="1684752278000" data-listing-reading-time-sort="5">
+<div class="thumbnail">
+<p><a href="./health_data/stRoke.html"> <p class="card-img-top"><img src="health_data/stRoke_files/figure-html/contrast_text-implementation-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+</div>
+<div class="body">
+<a href="./health_data/stRoke.html">
+<h3 class="no-anchor listing-title">
+Package: stRoke
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('REDCap'); return false;">
 REDCap
@@ -200,29 +211,74 @@ R
 FOSS
 </div>
 </div>
-<div class="card-text listing-description">
-Casting data bases and handling castellated data sets.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
-</div>
-<div class="listing-date">
-May 3, 2023
-</div>
-</div>
-</div>
+<a href="./health_data/stRoke.html">
+<div class="listing-description">
+<p>Collection of tools used in stroke research, but widely applicable.</p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="REDCap,Project,R,Consultant" data-listing-date-sort="1682632800000" data-listing-file-modified-sort="1683110821961" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="./health_data/ancle.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
+<div class="metadata">
+<a href="./health_data/stRoke.html">
+<div class="listing-date">
+May 17, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="REDCap,Package,R,FOSS" data-listing-date-sort="1683064800000" data-listing-file-modified-sort="1684753650745" data-listing-date-modified-sort="1684753650000" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./health_data/REDCapCAST.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./health_data/REDCapCAST.html">
+<h3 class="no-anchor listing-title">
+Package: REDCapCAST
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('REDCap'); return false;">
+REDCap
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Package'); return false;">
+Package
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('FOSS'); return false;">
+FOSS
+</div>
+</div>
+<a href="./health_data/REDCapCAST.html">
+<div class="listing-description">
+<p>Casting data bases and handling castellated data sets.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./health_data/REDCapCAST.html">
+<div class="listing-date">
+May 3, 2023
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="REDCap,Project,R,Consultant" data-listing-date-sort="1682632800000" data-listing-file-modified-sort="1683110821961" data-listing-date-modified-sort="1683110821000" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./health_data/ancle.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./health_data/ancle.html">
+<h3 class="no-anchor listing-title">
 Project: Foot database
-</h5>
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('REDCap'); return false;">
 REDCap
@@ -237,20 +293,19 @@ R
 Consultant
 </div>
 </div>
-<div class="card-text listing-description">
-Comprehensive data and data base migration to continue data collection.
+<a href="./health_data/ancle.html">
+<div class="listing-description">
+<p>Comprehensive data and data base migration to continue data collection.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-
+</a>
 </div>
+<div class="metadata">
+<a href="./health_data/ancle.html">
 <div class="listing-date">
 Apr 28, 2023
 </div>
-</div>
-</div>
-</div>
 </a>
+</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
@@ -615,6 +670,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (!isInternal(link.href)) {
           // target, if specified
           link.setAttribute("target", "_blank");
+          // default icon
+          link.classList.add("external");
       }
     }
 });
