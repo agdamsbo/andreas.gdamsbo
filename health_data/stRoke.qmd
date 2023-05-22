@@ -2,6 +2,7 @@
 title: "Package: stRoke"
 date: 2023-05-17
 description: Collection of tools used in stroke research, but widely applicable. 
+image: images/stRokelogo.png
 categories:
   - REDCap
   - Package
