@@ -46,14 +46,14 @@
     "href": "health_data/stRoke.html",
     "title": "Package: stRoke",
     "section": "",
-    "text": "During my early use of R, I started to collect my own solutions to problems in an package. At some point I realised that most of the problems were already solved elsewere and typically more elegantly. I took the best functions and moved them to a new project, the stRoke-package.(Damsbo 2023) This package have been used for learning and practising, but it has also been published to CRAN and I will keep including new functions in the package.\nThe main goal has been learning, but I also wanted to share my work for others to use or modify."
+    "text": "During my early use of R, I started to collect my own solutions to problems in an package. At some point I realised that most of the problems were already solved elsewhere and typically more elegantly. I took the best functions and moved them to a new project, the stRoke-package.(Damsbo 2023) This package have been used for learning and practising, but it has also been published to CRAN and I will keep including new functions in the package.\nThe main goal has been learning, but I also wanted to share my work for others to use or modify."
   },
   {
     "objectID": "health_data/stRoke.html#my-first-package",
     "href": "health_data/stRoke.html#my-first-package",
     "title": "Package: stRoke",
     "section": "",
-    "text": "During my early use of R, I started to collect my own solutions to problems in an package. At some point I realised that most of the problems were already solved elsewere and typically more elegantly. I took the best functions and moved them to a new project, the stRoke-package.(Damsbo 2023) This package have been used for learning and practising, but it has also been published to CRAN and I will keep including new functions in the package.\nThe main goal has been learning, but I also wanted to share my work for others to use or modify."
+    "text": "During my early use of R, I started to collect my own solutions to problems in an package. At some point I realised that most of the problems were already solved elsewhere and typically more elegantly. I took the best functions and moved them to a new project, the stRoke-package.(Damsbo 2023) This package have been used for learning and practising, but it has also been published to CRAN and I will keep including new functions in the package.\nThe main goal has been learning, but I also wanted to share my work for others to use or modify."
   },
   {
     "objectID": "health_data/stRoke.html#content-of-the-stroke-package",

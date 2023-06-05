@@ -1,5 +1,6 @@
 ---
 title: "Package: stRoke"
+freeze: false
 date: 2023-05-17
 description: Collection of tools used in stroke research, but widely applicable. 
 image: images/stRokelogo.png
@@ -12,7 +13,7 @@ categories:
 
 ## My first package
 
-During my early use of *R*, I started to collect my own solutions to problems in an package. At some point I realised that most of the problems were already solved elsewere and typically more elegantly. I took the best functions and moved them to a new project, the `stRoke`-package.[@stRoke] This package have been used for learning and practising, but it has also been published to CRAN and I will keep including new functions in the package.
+During my early use of *R*, I started to collect my own solutions to problems in an package. At some point I realised that most of the problems were already solved elsewhere and typically more elegantly. I took the best functions and moved them to a new project, the `stRoke`-package.[@stRoke] This package have been used for learning and practising, but it has also been published to CRAN and I will keep including new functions in the package.
 
 The main goal has been learning, but I also wanted to share my work for others to use or modify.
 

@@ -2,6 +2,7 @@
 title: "Package: REDCapCAST"
 date: 2023-05-03
 description: Casting data bases and handling castellated data sets. 
+image: images/REDCapCASTlogo.png
 categories:
   - REDCap
   - Package
