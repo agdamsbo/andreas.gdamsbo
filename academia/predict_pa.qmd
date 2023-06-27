@@ -26,8 +26,7 @@ The poster is created in PowerPoint, as this was where I had an available templa
 
 ## Background
 
-Physical activity (PA) reduces the risk of stroke and improves functional outcome. We aimed to investigate predictors for decrease and increase in PA after stroke.
-We have been interested in trying to predict patients at increased risk of physical activity decline after stroke.
+Physical activity (PA) reduces the risk of stroke and improves functional outcome. We aimed to investigate predictors for decrease and increase in PA after stroke. We have been interested in trying to predict patients at increased risk of physical activity decline after stroke.
 
 ## Methods
 
