@@ -1,6 +1,8 @@
 ---
 title: "Package: stRoke"
 date: 2023-05-17
+execute: 
+  freeze: true
 description: Collection of tools used in stroke research, but widely applicable. 
 image: images/stRokelogo.png
 categories:

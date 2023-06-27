@@ -2,7 +2,6 @@ project:
   type: website
   output-dir: docs
   
-
 execute:
   freeze: auto
 
@@ -35,7 +34,7 @@ website:
       - href: https://github.com/agdamsbo/andreas.gdamsbo
         text: Source
   page-footer: 
-    background: light
+    background: dark
     center: |
       Made using [Quarto](https://quarto.org/) | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) | Statistics with [Umami](https://stats.nikohuru.dk/share/bG56ngAz4o7dVeD1/andreas.gdamsbo)
 
