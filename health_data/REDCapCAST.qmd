@@ -12,7 +12,7 @@ categories:
 
 ## Working with REDCap data
 
-In our group (and at most Danish public research institutions) we collect clinical data using [REDCap](https://www.project-redcap.org/).
+In our group (and at most Danish public research institutions, and the world for that matter) we collect clinical data using [REDCap](https://www.project-redcap.org/).
 
 We also use the "longitudinal project" option. This gives some issues with castellated data. Different approaches to handling this [problem exists](https://redcap-tools.github.io/projects/), but none that kept the focused data acquisition approach of the very nice [`REDCapR`-library](https://ouhscbbmc.github.io/REDCapR/).
 

@@ -186,4 +186,4 @@ ls[[i]] <- list("RegularisedCoefs"=reg_coef_tbl,
 
 ## Publication status
 
-We have recently applied for additional registry based data on socio economic status to include in the analysis. We are awaiting this data before publishing our main article on this project.
+We have recently applied for additional registry based data on socio economic status and educational level to include in the analysis. We are awaiting this data before publishing our main article on this project.

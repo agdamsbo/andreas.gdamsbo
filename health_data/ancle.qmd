@@ -13,7 +13,7 @@ categories:
 
 This project is the most comprehensive data base migration yet.
 
-The client's wish, was for an old Microsoft Access data base to be migrated to REDCap, for continous use and data collection.
+The client's wish, was for an old Microsoft Access data base to be migrated to REDCap, for continuous use and data collection.
 
 ## Database
 

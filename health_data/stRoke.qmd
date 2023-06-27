@@ -24,7 +24,7 @@ The different functions have been documented in the [package vignette](https://a
 
 The first example is just a small exercise in implementing ideas as a function.
 
-Inspired by a [discussion on StackOverflow](https://stackoverflow.com/questions/1855884/determine-font-color-based-on-background-color) and [an example](https://stackoverflow.com/a/66669838/21019325), I created a function to determine contrast levels. My use case was colouring text based on background colour, but the function can be used in many other cases.
+Inspired by a [discussion on StackOverflow](https://stackoverflow.com/questions/1855884/determine-font-color-based-on-background-color) and [an example](https://stackoverflow.com/a/66669838/21019325), I created a function to determine contrast levels. My use case was colouring text based on background colour, but the function can be used in many other cases as well.
 
 Similar functionality is used in `Polychrome::swatch()` or `scales::show_col()`, but the function used for determining contrast here is [a little crude](https://github.com/r-lib/scales/blob/b3df2fb6efd5b440377b0699d3830f1082fa3140/R/colour-manip.r#L74). The `contrast_text()` is a little more sophisticated, and can be used on its own. Is it necessary? You'll decide for yourself.
 
