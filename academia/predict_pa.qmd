@@ -1,6 +1,8 @@
 ---
 title: "ESOC 2023: Predicting physical activity level after stroke"
 date: 2023-05-03
+execute: 
+  freeze: true
 image: images/esoc2023.png
 description: A little background to our abstract presented at the ESOC 2023 conference in Munich. 
 categories:
