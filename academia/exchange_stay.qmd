@@ -1,0 +1,25 @@
+---
+title: "Exchange: Visiting UBC, Vancouver, Canada"
+date: 2023-08-11
+execute: 
+  freeze: true
+image: images/dmcbh.png
+description: I am visiting the Brain Behavior Lab headed by prof. Lara Boyd at Dept. of Physiotherapy, University of British Columbia, BC, Canada and part of Djavad Mowafaghian Centre for Brain Health.
+categories:
+  - Exchange
+  - Physical activity
+  - Brain health
+---
+
+## Visiting the Djavad Mowafaghian Centre for Brain Health
+
+From 10 August and until 9 October I am visiting professor Lara Boyd and her Brain Behavior Laboratory, a part of the Djavad Mowafaghian Centre for Brain Health. 
+
+I am very much looking forward to my stay here. Below I have listed the initial brainstorm of thing to do while at the lab, as I am here to explore and be inspired. No specific method planned. I will try to write up a little something on the most interesting parts.
+
+## Wishlist
+
+
+{{< include _ubc_wishlist_base.qmd >}}
+
+{{< include _ubc_wishlist_add1.qmd >}}

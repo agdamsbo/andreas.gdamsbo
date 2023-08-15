@@ -1,0 +1,17 @@
+---
+bibliography: references.bib
+---
+
+### Initial wishlist for my visit
+
+The following list will be edited and expanded as new projects and options are added
+
+-   [ ] Learn about online cognitive assesment - is it valid?
+
+-   [ ] Ideas for setting up a workflow for automated MR scan assessments using the free and open source ADS tool[@liu2021] - this specific tool is not in use, but the group uses other similar tools.
+
+-   [ ] Follow the most interesting projects and enjoy this opportunity to explore
+
+-   [ ] Write midterm evaluation for AU
+
+-   [ ] Prepare for oral presentation at the World Stroke Congress, abstract title is "Persistent low physical activity after stroke and risk of new vascular event or death" - I'll be sharing more on this later.
