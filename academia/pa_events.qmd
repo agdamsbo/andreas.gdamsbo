@@ -1,0 +1,18 @@
+---
+title: "WSC 2023: Persistent low physical activity after stroke and risk of new vascular event or death"
+date: 2023-09-18
+execute: 
+  freeze: true
+# image: images/wsc2023.png
+description: Here is a few background notes on my oral presentation at the World Stroke Congress 2023. 
+categories:
+  - Conference abstract
+  - Physical activity
+  - Stroke
+  - Survival analysis
+  - R
+---
+
+## Intro
+
+I will presenting our work on "Persistent low physical activity after stroke and risk of new vascular event or death" at the World Stroke Congress 2023, Toronto, Canada on 11 October. For now this is simply a placeholder for the site while preparing the presentation.
