@@ -3,7 +3,7 @@ title: "WSC 2023: Persistent low physical activity after stroke and risk of new 
 date: 2023-09-18
 execute: 
   freeze: true
-# image: images/wsc2023.png
+image: images/wsc2023.png
 description: Here is a few background notes on my oral presentation at the World Stroke Congress 2023. 
 categories:
   - Conference abstract
