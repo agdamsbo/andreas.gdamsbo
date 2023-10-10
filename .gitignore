@@ -55,6 +55,7 @@ rsconnect/
 
 .DS_Store
 
-notes.txt
+# notes.txt
+*.txt
 
 docs/
