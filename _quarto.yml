@@ -36,7 +36,7 @@ website:
   page-footer: 
     background: dark
     center: |
-      Made using [Quarto](https://quarto.org/) | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) | Statistics with [Umami](https://stats.nikohuru.dk/share/bG56ngAz4o7dVeD1/andreas.gdamsbo)
+      Made using [Quarto](https://quarto.org/) | [CC BY-NC 4.0](LICENSE.html) | Statistics with [Umami](https://analytics.gdamsbo.dk/share/TLJEY9tJaZ324zTH/Andreas)
 
 format:
   html:
