@@ -17,10 +17,10 @@ about:
       - href: "https://git.nikohuru.dk/andreas/cv/raw/branch/main/docs/cv.pdf"
         icon: paperclip
         text: CV
-      - href: "https://social.gdamsbo.dk/@andreas"
-        icon: "mastodon"
-        text: Mastodon
-        rel: "me"
+      # - href: "https://social.gdamsbo.dk/@andreas"
+      #   icon: "mastodon"
+      #   text: Mastodon
+      #   rel: "me"
 ---
 
 Hi! I am **Andreas Gammelgaard Damsbo**. I am a medical doctor and PhD-student at the [Danish Stroke Centre, Aarhus University Hospital](https://www.en.auh.dk/departments/danish-stroke-centre/) and [Department of Clinical Medicine, Aarhus University](https://pure.au.dk/portal/en/persons/andreas-gammelgaard-damsbo(e3c4afce-3eba-4456-8b8b-2fd90775c87a).html).
