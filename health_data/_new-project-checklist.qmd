@@ -1,0 +1,5 @@
+
+## Checklist to set up new reaserch projects
+
+
+- system("quarto publish gh-pages")

@@ -28,7 +28,9 @@ website:
       - href: academia.qmd
         text: Research
       - href: health-data.qmd
-        text: Projects
+        text: Health data projects
+      - href: mixed.qmd
+        text: Project notes
       # - about.qmd
     right:
       - href: https://github.com/agdamsbo/andreas.gdamsbo

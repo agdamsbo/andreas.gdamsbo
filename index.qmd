@@ -14,7 +14,7 @@ about:
       - href: "https://orcid.org/0000-0002-7559-1154"
         icon: file-earmark-person
         text: ORCiD
-      - href: "https://git.nikohuru.dk/andreas/cv/raw/branch/main/cv.pdf"
+      - href: "https://git.nikohuru.dk/andreas/cv/raw/branch/main/docs/cv.pdf"
         icon: paperclip
         text: CV
       - href: "https://social.gdamsbo.dk/@andreas"
