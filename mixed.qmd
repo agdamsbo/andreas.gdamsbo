@@ -1,0 +1,13 @@
+---
+title: "Project notes"
+listing:
+  contents:
+  - "mixed/*.qmd"
+  type: default
+  sort: "date desc"
+  categories: numbered
+---
+
+# Bag of mixed goods
+
+This section is a mixed pile of my own notes on different spare time projects mainly around Home Assistant, R and other self hosting experiments.

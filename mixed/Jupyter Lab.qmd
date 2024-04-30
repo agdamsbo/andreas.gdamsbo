@@ -1,0 +1,71 @@
+---
+title: "IRkernel in Jupyter Lab on YunoHost"
+date: 2023-11-28
+description: Step-wise notes to get the IRkernel to run in Jupyter Lab on YunoHost. 
+categories:
+  - YunoHost
+  - IRkernel
+  - R
+  - Jupyter
+---
+
+# Getting R to run in Jupyter Lab
+
+I am hosting my own small server using the very nice and relatively simple YunoHost. It is currently based on Debian Bullseye
+
+I have installed Jupyter Lab through their apps repository and followed the steps below to get an R kernel to run.
+
+This project is mainly for my own learning purposes and to be used as notes for future me when problems occur.
+
+# Installation
+
+Inspiration is from https://www.cahoover.com/data-science/adding-an-r-kernel-to-jupyter-lab/, https://www.digitalocean.com/community/tutorials/how-to-install-r-on-debian-10 and https://linux.how2shout.com/install-the-latest-r-programming-language-version-on-debian-11-bullseye/.
+
+After R is installed, launch R in the terminal to install some packages:
+
+``` bash
+sudo -i R
+```
+
+These packages are suggested by [Christopher Hoover](https://www.cahoover.com/data-science/adding-an-r-kernel-to-jupyter-lab/), though I have changed `devtools` to `remotes`.
+
+``` r
+# install from CRAN
+install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'remotes', 'uuid', 'digest')) 
+```
+
+There are seven packages we need to install to setup the R Kernel in the Jupyter Lab environment.
+
+-   **repr**: String and binary representations of objects for several formats mime types.
+
+-   **IRdisplay**: An interface to the rich display capabilities of 'Jupyter' front-ends (e.g. 'Jupyter Notebook') https://jupyter.org. Designed to be used from a running 'IRkernel' session https://irkernel.github.io.
+
+-   **evaluate**: Parsing and evaluation tools that make it easy to recreate the command line behavior of R.
+
+-   **crayon**: Colored terminal output on terminals that support 'ANSI' color and highlight codes. It also works in 'Emacs' 'ESS'. 'ANSI' color support is automatically detected. Colors and highlighting can be combined and nested. New styles can also be created easily. This package was inspired by the 'chalk' 'JavaScript' project.
+
+-   **pbdZMQ**: pbdZMQ is an R package providing a simplified interface to ZeroMQ with a focus on client/server programming frameworks. Notably, pbdZMQ should allow for the use of ZeroMQ on Windows platforms.
+
+-   **remotes**: Collection of package development tools.
+
+-   **uuid**: Tools for generating and handling of UUIDs (Universally Unique Identifiers).
+
+-   **digest**: digest provides \`hash' function summaries for GNU R objects.
+
+Finally, the **IRkernel** pacakge, the R kernel for Jupyter, is installed:
+
+``` r
+# from Github 
+remotes::install_github('IRkernel/IRkernel')
+```
+
+The following is **specific to the installation on Yunohost**:
+
+To get the IRkernel to be recognised in jupyterlab on the YunoHost install, I had to modify the `installspec()` to allow for a specified path to jupyter as well as to specify the `jsonlite` functions used in the function. I forked the `IRkernel` and modified the `installspec()`, so the next step will look like this:
+
+``` r
+source("https://github.com/agdamsbo/IRkernel/blob/master/R/installspec.r")
+installspec(user=FALSE, jupyter_path="/opt/jupyterlab/venv/bin/jupyter") # This will give access to all users
+```
+
+After this, jupyterlab should recognise the R kernel. If not, try to stop and start the service. Have fun at it.

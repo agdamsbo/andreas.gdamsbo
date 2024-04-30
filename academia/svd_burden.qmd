@@ -1,0 +1,17 @@
+---
+title: "ESOC 2024: Physical activity and lifestyle factors, and small vessel disease burden in acute ischemic stroke"
+date: 2024-04-30
+execute: 
+  freeze: true
+description: I will be sharing the challenge of assessing 1055 acute stroke patients scans and the analysis work to investigate the interaction between physical activity and classical cardio-vascular risk factors and the effect on SVD burden.
+categories:
+  - Conference abstract
+  - Physical activity
+  - Stroke
+  - Small vessel disease
+  - R
+---
+
+## Intro
+
+For now, just a placeholder.
