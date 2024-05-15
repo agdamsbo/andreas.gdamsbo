@@ -23,7 +23,7 @@ For this years ESOC event, I have been preparing a poster on my last PhD-project
 
 For this project, data has been pooled from two large clinical trials.[@kraglund2018; @blauenfeldt2023] Available MR-scans were assessed with the help of 7 trained clinicians. The process is documented including the REDCap assessment tool in [this repository](https://agdamsbo.github.io/cSVD-burden-annotation-and-analysis-project/). I had planned to only allocate one assessor to each subject, but after an initial batch of 50 subject, assessed by all assessors, two assessors were allocated for each subject. Also, it was decided to have all assessments with disagreement evaluated by a third assessor for a consensus score. This work is still under-way (as of 13. May 2024).
 
-Data analysis and further work is [documented in another repository](https://agdamsbo.github.io/svd-modification/), which was also intended for poster generation with [quarto](https://quarto.org/docs/output-formats/typst-custom.html). I did not like the text-heavy templates and did not have the time to start creating my own, so I ended up using Microsoft's PowerPoint, which is great for the task. This is the result.
+Data analysis and further work is [documented in another repository](https://agdamsbo.github.io/svd-modification/), which was also intended for poster generation with [quarto](https://quarto.org/docs/output-formats/typst-custom.html). I did not like the text-heavy templates and did not have the time to start creating my own, so I ended up using Microsoft's PowerPoint, which is great for the task. [This is the result](images/esoc2024svd.pdf).
 
 ## Further work
 
