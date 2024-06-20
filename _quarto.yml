@@ -38,15 +38,15 @@ website:
   page-footer: 
     background: dark
     center: |
-      Made using [Quarto](https://quarto.org/) | [CC BY-NC 4.0](LICENSE.html) | Statistics with [Umami](https://analytics.gdamsbo.dk/share/TLJEY9tJaZ324zTH/Andreas)
+      Made using [Quarto](https://quarto.org/) | [CC BY-NC 4.0](LICENSE.html) | Statistics with [Umami](https://analytics.gdamsbo.dk/share/TLJEY9tJaZ324zTH/Andreas) | [Contact](mailto:andreas@gdamsbo.dk)
 
 format:
   html:
     code-fold: true
     code-overflow: wrap
     theme: 
-      dark: solar
       light: lumen
+      dark: solar
     # css: styles.css
     toc: true
     link-external-newwindow: true

@@ -4,9 +4,11 @@ date: 2023-11-28
 description: Step-wise notes to get the IRkernel to run in Jupyter Lab on YunoHost. 
 categories:
   - YunoHost
+  - Homelab
+  - Selfhost
   - IRkernel
   - R
-  - Jupyter
+  - Jupyter Lab
 ---
 
 # Getting R to run in Jupyter Lab
