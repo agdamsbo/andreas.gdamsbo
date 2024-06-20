@@ -1,0 +1,72 @@
+---
+title: Wireguard VPS homeserver-bridge
+date: 2022-09-28
+description: Short reference documentation for setting up a VPS-homeserver bridge with Wireguard.
+categories:
+  - Selfhost
+  - Homelab
+  - Wireguard
+  - VPS
+  - VPN
+---
+
+We are renting, and I have a small homeserver in the office. I mostly host different apps and sevices for my own use, but also a few pages for public access. I needed a way to securely access my homeserver without having access to the router. This led me to renting a small VPS at [Hetzner](https://www.hetzner.com/cloud/) and run a [Wireguard](https://www.wireguard.com/) instance on this to tunnel all relevant traffic to my home-server. I have been able to find a lot of inspiration online, but nowhere, I found the setup I needed, so here goes for inspiration.
+
+::: callout-note
+## Sources
+
+My inspiration is heavily drawn from these two following sites, that I am in no way affiliated with.
+
+-   [wiki.r-selfhosted.com](https://wiki.r-selfhosted.com/guides/software/virtual-private-networks/wireguard/#wireguard)
+-   [www.procustodibus.com](https://www.procustodibus.com/blog/2022/09/wireguard-port-forward-from-internet/)
+:::
+
+## My configuration files
+
+Follow these steps to generate your private and public encryption keys and then use the following for inspiration on how to set up your own server configuration file (e.g. `/etc/wireguard/wg0.conf`).
+
+### VPS
+
+```         
+[Interface]
+Address = 10.25.4.3/32,fd42::1/128
+PrivateKey = [Private key for VPS]
+ListenPort = [VPS port]
+
+PreUp = sysctl -w net.ipv4.ip_forward=1
+
+PreUp = iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination 10.25.4.1:443
+PreUp = iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.25.4.1:80
+PostDown = iptables -t nat -D PREROUTING -p tcp --dport 443 -j DNAT --to-destination 10.25.4.1:443
+PostDown = iptables -t nat -D PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.25.4.1:80
+
+PreUp = iptables -t nat -A POSTROUTING -o wg0 -j MASQUERADE
+PostDown = iptables -t nat -D POSTROUTING -o wg0 -j MASQUERADE
+
+[Peer]
+PublicKey = [Public key for home-server]
+AllowedIPs = 10.25.4.1/32
+PersistentKeepalive = 25
+```
+
+### Home-server
+
+```         
+[Interface]
+Address = 10.25.4.1/24
+ListenPort = [Wireguard port number]
+PrivateKey = [Private key for home-server]
+
+## Hetzner VPS
+[Peer]
+PublicKey = [Public key for VPS]
+AllowedIPs = 0.0.0.0/0
+Endpoint = [VPS public IP]:[Wireguard port number]
+PersistentKeepalive = 25
+```
+
+::: callout-note
+## Closing thoughts
+
+2024.06.20: I collected these notes quite some time ago. The solution has been rock solid through Internet provider changes and so on.
+:::

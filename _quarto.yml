@@ -30,7 +30,7 @@ website:
       - href: health-data.qmd
         text: Health data projects
       - href: mixed.qmd
-        text: Project notes
+        text: Other projects
       # - about.qmd
     right:
       - href: https://github.com/agdamsbo/andreas.gdamsbo
