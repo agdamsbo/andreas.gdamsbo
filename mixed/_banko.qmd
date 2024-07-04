@@ -1,0 +1,12 @@
+---
+title: "Banko game with Shiny/shinylive"
+date: 2024-06-20
+description: Play banko with *R* also in the browser. 
+categories:
+  - Shiny
+  - shinylive
+  - R
+  - FDF
+  - Play
+---
+

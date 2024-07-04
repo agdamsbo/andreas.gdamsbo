@@ -22,6 +22,8 @@ website:
   search:
     type: overlay
   navbar:
+    logo: /images/favicon-white.png
+    logo-href: https://andreas.gdamsbo.dk
     left:
       - href: index.qmd
         text: Home
