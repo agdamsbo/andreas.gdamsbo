@@ -1,6 +1,6 @@
 ---
 title: Wireguard VPS homeserver-bridge
-date: 2022-09-28
+date: 2024-10-09
 description: Short reference documentation for setting up a VPS-homeserver bridge with Wireguard.
 categories:
   - Selfhost
@@ -9,7 +9,60 @@ categories:
   - VPN
 ---
 
-We are renting, and I have a small homeserver in the office. I mostly host different apps and sevices for my own use, but also a few pages for public access. I needed a way to securely access my homeserver without having access to the router. This led me to renting a small VPS at [Hetzner](https://www.hetzner.com/cloud/) and run a [Wireguard](https://www.wireguard.com/) instance on this to tunnel all relevant traffic to my home-server. I have been able to find a lot of inspiration online, but nowhere, I found the setup I needed, so here goes for inspiration.
+::: callout-note
+## Revisited setup guide
+
+This guide is updated after I had to go through the process again when my setup got corrupted after a power outage. Until then, this setup has been rock-solid for 3 years during change of internet provider with no adjustments needed.
+:::
+
+We are renting, and I have a small homeserver in the office. I mostly host different apps and sevices for my own use, but also a few pages for public access. I needed a way to securely access my homeserver without having access to the router. This led me to renting a small VPS (Debian 12) at [Hetzner](https://www.hetzner.com/cloud/) (cx22) and run a [Wireguard](https://www.wireguard.com/) instance on this to tunnel all relevant traffic to my home-server. I have been able to find a lot of inspiration online, but nowhere, I found the setup I needed, so here goes for inspiration.
+
+After recently having to setup everything again myself, I am now including a complete set of instructions.
+
+### Creating configuration templates
+
+Skipping a little ahead, we start by creating the encryption keys and configuration templates
+
+I recently ran into troubles having no luck with getting a handshake between my two instances, which got me a little frustrated, but [this comment on serverfault.com](https://serverfault.com/questions/1040165/wireguard-not-completing-handshake#comment1419778_1041230) got me back on track:
+
+> ...at least, it tends to less error-prone to use a desktop Wireguard GUI to generate the keys than working it out using "wireguard-tools" CLI utilities...
+
+I created my template configuration and keys on [wireguardconfig.com](https://www.wireguardconfig.com/#), which will generate everything in your browser, so nothing is stored server side. This works well.
+
+### On the server (VPS) and then the same steps on the client (homeserver)
+
+First update your system and install wireguard:
+
+```{}
+sudo apt update
+sude apt upgrade
+sudo apt install wireguard
+```
+
+Create and open the config file:
+
+```{}
+sudo nano /etc/wireguard/wg0.conf
+```
+
+Insert the template configuration file for the server. Below I provide my configuration files for reference on a working setup, and with a few extra added lines compared to the templates.
+
+Save and close the configuration files.
+
+Now enable and start the wg0 interface.
+
+```{}
+sudo systemctl enable wg-quick@wg0
+sudo systemctl start wg-quick@wg0
+```
+
+Afterwards, my experience is that a reboot is necessary, but you can check the connection:
+
+```{}
+sudo wg
+```
+
+Look for the "Latest handshake" to verify that the connection is up and running.
 
 ::: callout-note
 ## Sources
@@ -18,29 +71,34 @@ My inspiration is heavily drawn from these two following sites, that I am in no 
 
 -   [wiki.r-selfhosted.com](https://wiki.r-selfhosted.com/guides/software/virtual-private-networks/wireguard/#wireguard)
 -   [www.procustodibus.com](https://www.procustodibus.com/blog/2022/09/wireguard-port-forward-from-internet/)
+-   [blog.cavelab.dev](https://blog.cavelab.dev/2021/03/vps-wireguard-iptables/)
+-   [serverfault.com](https://serverfault.com/questions/1040165/wireguard-not-completing-handshake)
 :::
 
 ## My configuration files
 
-Follow these steps to generate your private and public encryption keys and then use the following for inspiration on how to set up your own server configuration file (e.g. `/etc/wireguard/wg0.conf`).
+Insert your own values in the square brackets.
 
 ### VPS
 
-```         
+```
 [Interface]
 Address = 10.25.4.3/32,fd42::1/128
 PrivateKey = [Private key for VPS]
 ListenPort = [VPS port]
 
+# Allows package forwarding
 PreUp = sysctl -w net.ipv4.ip_forward=1
 
+# Allows forwarding traffic on specified ports (remember to open corresponding ports on the VPS firewall)
 PreUp = iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination 10.25.4.1:443
 PreUp = iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.25.4.1:80
 PostDown = iptables -t nat -D PREROUTING -p tcp --dport 443 -j DNAT --to-destination 10.25.4.1:443
 PostDown = iptables -t nat -D PREROUTING -p tcp --dport 80 -j DNAT --to-destination 10.25.4.1:80
 
-PreUp = iptables -t nat -A POSTROUTING -o wg0 -j MASQUERADE
-PostDown = iptables -t nat -D POSTROUTING -o wg0 -j MASQUERADE
+# THis may be necessary for you, but I found it overflooded my logs.
+#PreUp = iptables -t nat -A POSTROUTING -o wg0 -j MASQUERADE
+#PostDown = iptables -t nat -D POSTROUTING -o wg0 -j MASQUERADE
 
 [Peer]
 PublicKey = [Public key for home-server]
@@ -56,6 +114,26 @@ Address = 10.25.4.1/24
 ListenPort = [Wireguard port number]
 PrivateKey = [Private key for home-server]
 
+# These lines should allow forwarding outgoing traffic to the local network.
+# Maybe you want it differently. It works for me.
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT
+PostUp = iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE
+PostUp = ip6tables -A FORWARD -i %i -j ACCEPT
+PostUp = ip6tables -A FORWARD -o %i -j ACCEPT
+PostUp = ip6tables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE
+PostUp = ip link set multicast on dev %i
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT
+PostDown = iptables -t nat -D POSTROUTING -o enp0s31f6 -j MASQUERADE
+PostDown = ip6tables -D FORWARD -i %i -j ACCEPT
+PostDown = ip6tables -D FORWARD -o %i -j ACCEPT
+PostDown = ip6tables -t nat -D POSTROUTING -o enp0s31f6 -j MASQUERADE
+
+# Setting up a firewall table
+Table = 123
+PreUp = ip rule add from 10.25.4.1 table 123 priority 456
+PostDown = ip rule del from 10.25.4.1 table 123 priority 456
+
+
 ## Hetzner VPS
 [Peer]
 PublicKey = [Public key for VPS]
@@ -63,9 +141,3 @@ AllowedIPs = 0.0.0.0/0
 Endpoint = [VPS public IP]:[Wireguard port number]
 PersistentKeepalive = 25
 ```
-
-::: callout-note
-## Closing thoughts
-
-2024.06.20: I collected these notes quite some time ago. The solution has been rock solid through Internet provider changes and so on.
-:::
