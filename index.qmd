@@ -15,6 +15,10 @@ about:
         text: Matrix
         icon: "chat"
         rel: "me"
+      - href: "https://signal.me/#eu/xwRCagfsZBi3SAHtjgZyQ1Z5IxC4yYzbh0mYV3RdTBBYdlknxBRIWLYgcFOnoXXG"
+        text: Signal
+        icon: "chat"
+        rel: "me"
       - href: "https://github.com/agdamsbo"
         text: GitHub
         icon: "github"
