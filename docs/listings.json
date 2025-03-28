@@ -1,0 +1,26 @@
+[
+  {
+    "listing": "/health-data.html",
+    "items": [
+      "/health_data/stRoke.html",
+      "/health_data/REDCapCAST.html",
+      "/health_data/ancle.html"
+    ]
+  },
+  {
+    "listing": "/academia.html",
+    "items": [
+      "/academia/svd_burden.html",
+      "/academia/pa_events.html",
+      "/academia/exchange_stay.html",
+      "/academia/predict_pa.html"
+    ]
+  },
+  {
+    "listing": "/mixed.html",
+    "items": [
+      "/mixed/wireguard-vps-homeserver-bridge.html",
+      "/mixed/Jupyter Lab.html"
+    ]
+  }
+]
